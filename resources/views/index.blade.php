@@ -98,7 +98,7 @@ foreach ($saboresCodigo as $key => $value) {
       <article class="maquinas">
         <h1>La máquina de la pâtisserie</h1>
         <div class="imagen">
-          <img src="img/maquinasx6.png" alt="Máquinas en distintos colores">
+          <img src="{{asset('images/maquinasx6.png')}}" alt="Máquinas en distintos colores">
         </div>
         <h2>¿Todavía no tenés la tuya?</h2>
         <h2>Comprala <a href="comprar.php">acá</a> </h2>
