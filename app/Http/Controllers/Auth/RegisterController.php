@@ -49,8 +49,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'username' => ['required', 'string', 'max:255'],
+            'country_born' => ['required', 'string', 'max:255'],
+            'phone_number' => ['string', 'max:12'],
+            'avatar' => ['mimetypes:image/png,video/jpeg,image/jpg'],
+            'source_referral' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -64,8 +70,14 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
             'email' => $data['email'],
+            'username' => $data['username'],
+            'country_born' => $data['country_born'],
+            'phone_number' => $data['phone_number'],
+            'avatar' => request() ->file('avatar')->store('public/avatars'),
+            'source_referral' => $data['source_referral'],
             'password' => Hash::make($data['password']),
         ]);
     }
