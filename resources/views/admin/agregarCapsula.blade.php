@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="container contenedor-agregarCapsula">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -17,23 +17,7 @@
                     <div class="card-body">
                         <form method="POST" action="/agregarCapsula" enctype="multipart/form-data">
                             @csrf
-                    <div class="form-group row">
-                        <label for="category" class="col-md-4 col-form-label text-md-right"> {{ __('Categoría:') }} </label>
 
-                      <div class="col-md-6">
-                        <select id="category" type="text" class="form-control @error('source_referral') is-invalid @enderror" name="category" value="{{ old('category') }}" autocomplete="category" autofocus>>
-                          <option value="" disabled selected>Seleccione una categoría</option>
-                          <option value="maquina" >Máquinas</option>
-                          <option value="maquina" >Cápsulas</option>
-                        @error('category')
-                              <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $message }}</strong>
-                              </span>
-                        @enderror
-                        </select>
-
-                      </div>
-                    </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre de la Cápsula:') }}</label>
 
@@ -61,12 +45,25 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Imagen:') }}</label>
+                        <label for="imageCapsule" class="col-md-4 col-form-label text-md-right">{{ __('Imagen Cápsula:') }}</label>
 
                         <div class="col-md-6">
-                            <input id="image" type="file"  name="image">
+                            <input id="imageCapsule" type="file"  name="imageCapsule">
 
-                            @error('image')
+                            @error('imageCapsule')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="imageProduct" class="col-md-4 col-form-label text-md-right">{{ __('Imagen Producto:') }}</label>
+
+                        <div class="col-md-6">
+                            <input id="imageProduct" type="file"  name="imageProduct">
+
+                            @error('imageProduct')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -99,6 +96,20 @@
                         @enderror
                 </div>
             </div>
+
+            <div class="form-group row">
+                <label for="stock" class="col-md-4 col-form-label text-md-right">{{ __('Stock:') }}</label>
+
+                <div class="col-md-6">
+                    <input id="stock" type="text" class="form-control @error('name') is-invalid @enderror" name="stock" value="{{ old('stock') }}" required autocomplete="stock" autofocus>
+
+                    @error('stock')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+            </div>
+        </div>
             <div class="form-group row mb-0">
                 <div class="col-md-6 offset-md-4">
                     <button type="submit" class="btn btn-primary">
