@@ -17,6 +17,7 @@ foreach ($saboresCodigo as $key => $value) {
   $productosCapsulas[$key]["precio"] = $precios[$value] . ' c/u';
 }
 
+
  ?>
 
 @extends('layouts.frontend')
@@ -29,6 +30,7 @@ foreach ($saboresCodigo as $key => $value) {
 @endsection
 
 @section('content')
+
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">

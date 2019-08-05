@@ -18,7 +18,8 @@ class CreateCapsulesTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('description');
-            $table->string('image');
+            $table->string('imageCapsule');
+            $table->string('imageProduct');
             $table->decimal('price',6,2);
             $table->string('flavor');
             $table->integer('stock');

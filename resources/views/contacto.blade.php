@@ -8,8 +8,6 @@
 @endsection
 
 @section('content')
-
-
     <section id="contacto">
       <div class="contact-container">
       <h1>Tu comentario nos interesa</h1>

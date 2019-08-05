@@ -38,15 +38,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                      @if(strpos($_SERVER['SCRIPT_FILENAME'],'index.php'))
+                      @if(Request::getPathInfo()=='/index')
                         <li><a href="{{ url('/index') }}">Inicio</a></li>
                         <li><a href="#quienes-somos">Conocenos</a></li>
                         <li><a href="#productos">Productos</a></li>
                         <li><a href="{{ url('/contacto') }}">Contacto</a></li>
                       @else
                       <li><a href="{{ url('/index') }}">Inicio</a></li>
-                      <li><a href="index.php#quienes-somos">Conocenos</a></li>
-                      <li><a href="productos.php">Productos</a></li>
+                      <li><a href="index#quienes-somos">Conocenos</a></li>
+                      <li><a href="{{ url('/products') }}">Productos</a></li>
                       <li><a href="{{ url('/contacto') }}">Contacto</a></li>
                       @endif
                     </ul>

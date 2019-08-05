@@ -22,6 +22,10 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
+Route::get('/products', function () {
+    return view('products');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
