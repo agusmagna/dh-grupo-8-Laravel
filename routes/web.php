@@ -43,6 +43,6 @@ Route::get('/agregarMaquina', function(){
 });
 Route::post('/agregarMaquina', 'MaquinasController@create');
 
-Route::get('/panelAdmin', 'CapsulasController@index');
+Route::get('/panelAdmin', 'productsController@index');
 
 Route::post('/agregarCapsula', 'productsController@create');

@@ -15,8 +15,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $productosCapsulas = Capsula::all();
-        //dd(compact('productosCapsulas'));
+        $productosCapsulas = Capsules::all();
+        // dd(compact('productosCapsulas'));
         return view('admin/paneladmin',compact('productosCapsulas'));
 
     }
