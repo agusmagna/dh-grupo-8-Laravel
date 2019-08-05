@@ -31,6 +31,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/agregarCapsula', function(){
-  return view ('capsulas.agregarCapsula');
+  return view ('productos.agregarCapsula');
 });
 Route::post('/agregarCapsula', 'CapsulasController@create');
+
+Route::get('/agregarMaquina', function(){
+  return view ('productos.agregarMaquina');
+});
+Route::post('/agregarMaquina', 'MaquinasController@create');
+
+Route::get('/panelAdmin', 'CapsulasController@index');

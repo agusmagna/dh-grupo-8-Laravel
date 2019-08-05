@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use \App\Capsula;
 use Illuminate\Http\Request;
 
-class CapsulasController extends Controller
+class MaquinasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +13,7 @@ class CapsulasController extends Controller
      */
     public function index()
     {
-        $productosCapsulas = Capsula::all();
-        //dd(compact('productosCapsulas'));
-        return view('admin/paneladmin',compact('productosCapsulas'));
+        //
     }
 
     /**
@@ -24,20 +21,18 @@ class CapsulasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $form)
-    {
-      $capsulaNueva = new Capsula();
-      $capsulaNueva->name = $form['name'];
-      $capsulaNueva->description = $form['description'];
-      $capsulaNueva->imageCapsule =  $form['imageCapsule'];
-      $capsulaNueva->imageProduct =  $form['imageProduct'];
-      $capsulaNueva->price =  $form['price'];
-      $capsulaNueva->flavor =  $form['flavor'];
-      $capsulaNueva->stock =  $form['stock'];
+     public function create(Request $form)
+     {
+       $capsulaNueva = new Maquina();
+       $capsulaNueva->name = $form['name'];
+       $capsulaNueva->description = $form['description'];
+       $capsulaNueva->image =  $form['image'];
+       $capsulaNueva->price =  $form['price'];
+       $capsulaNueva->flavor =  $form['flavor'];
+       $capsulaNueva->stock =  $form['stock'];
 
-      $productoNuevo->save();
-    }
-
+       $productoNuevo->save();
+     }
     /**
      * Store a newly created resource in storage.
      *
