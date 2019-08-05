@@ -2,10 +2,19 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD:app/Http/Controllers/CapsulasController.php
 use \App\Capsula;
-use Illuminate\Http\Request;
+=======
 
+>>>>>>> a88a8325bf45281aa323bfb2fb4e0fb2db10989e:app/Http/Controllers/productsController.php
+use Illuminate\Http\Request;
+use \App\Capsules;
+
+<<<<<<< HEAD:app/Http/Controllers/CapsulasController.php
 class CapsulasController extends Controller
+=======
+class ProductsController extends Controller
+>>>>>>> a88a8325bf45281aa323bfb2fb4e0fb2db10989e:app/Http/Controllers/productsController.php
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +23,15 @@ class CapsulasController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD:app/Http/Controllers/CapsulasController.php
         $productosCapsulas = Capsula::all();
         //dd(compact('productosCapsulas'));
         return view('admin/paneladmin',compact('productosCapsulas'));
+=======
+        $productosCapsulas = Capsules::all();
+        $machines = Machines::all();
+        return view ('products',['capsulas' => $productosCapsulas,'machines'=> $machines]);
+>>>>>>> a88a8325bf45281aa323bfb2fb4e0fb2db10989e:app/Http/Controllers/productsController.php
     }
 
     /**
@@ -26,7 +41,7 @@ class CapsulasController extends Controller
      */
     public function create(Request $form)
     {
-      $capsulaNueva = new Capsula();
+      $capsulaNueva = new Capsules();
       $capsulaNueva->name = $form['name'];
       $capsulaNueva->description = $form['description'];
       $capsulaNueva->imageCapsule =  $form['imageCapsule'];

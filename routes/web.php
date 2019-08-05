@@ -22,9 +22,7 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
-Route::get('/products', function () {
-    return view('products');
-});
+Route::get('/products', 'productsController@index');
 
 Auth::routes();
 
@@ -33,6 +31,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/agregarCapsula', function(){
   return view ('productos.agregarCapsula');
 });
+<<<<<<< HEAD
 Route::post('/agregarCapsula', 'CapsulasController@create');
 
 Route::get('/agregarMaquina', function(){
@@ -41,3 +40,6 @@ Route::get('/agregarMaquina', function(){
 Route::post('/agregarMaquina', 'MaquinasController@create');
 
 Route::get('/panelAdmin', 'CapsulasController@index');
+=======
+Route::post('/agregarCapsula', 'productsController@create');
+>>>>>>> a88a8325bf45281aa323bfb2fb4e0fb2db10989e
