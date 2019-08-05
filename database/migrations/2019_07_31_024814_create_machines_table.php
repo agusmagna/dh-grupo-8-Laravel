@@ -21,6 +21,7 @@ class CreateMachinesTable extends Migration
             $table->string('image');
             $table->decimal('price',8,2);
             $table->string('color');
+            $table->integer('stock');
         });
     }
 

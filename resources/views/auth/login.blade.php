@@ -1,14 +1,10 @@
 @extends('layouts.frontend')
-@section('headScript')
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-@endsection
-
 @section('css')
-  <link rel="stylesheet" href="{{asset('css/app.css')}}">
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<link href="{{ asset('css/stylesLoginRegister.css') }}" rel="stylesheet">
 @endsection
-
 @section('content')
-<div class="container">
+<div class="container contenedor-login">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

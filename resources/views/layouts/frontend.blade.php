@@ -19,8 +19,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
-    <link href="{{ asset('css/stylesLayoutFrontend.css') }}" rel="stylesheet">
     @yield('css')
+    <link href="{{ asset('css/stylesLayoutFrontend.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -99,9 +99,9 @@
         <div class="footer-capsulas">
           @for ($i=0; $i < 5; $i++)
             @if ($i%2==0)
-              <div class="footer-capsula1"><img src="{{ asset('images/contorno_capsula.png')}}" alt=""></div>;
+              <div class="footer-capsula1"><img src="{{ asset('images/contorno_capsula.png')}}" alt=""></div>
             @else
-              <div class="footer-capsula2"><img src="{{asset('images/contorno_capsula.png')}}" alt=""></div>;
+              <div class="footer-capsula2"><img src="{{asset('images/contorno_capsula.png')}}" alt=""></div>
             @endif
           @endfor
         </div>
@@ -121,9 +121,9 @@
         <div class="footer-capsulas">
           @for ($i=0; $i < 5; $i++)
             @if ($i%2==0)
-              <div class="footer-capsula1"><img src="{{ asset('images/contorno_capsula.png')}}" alt=""></div>;
+              <div class="footer-capsula1"><img src="{{ asset('images/contorno_capsula.png')}}" alt=""></div>
             @else
-              <div class="footer-capsula2"><img src="{{asset('images/contorno_capsula.png')}}" alt=""></div>;
+              <div class="footer-capsula2"><img src="{{asset('images/contorno_capsula.png')}}" alt=""></div>
             @endif
           @endfor
         </div>

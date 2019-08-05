@@ -21,6 +21,7 @@ class CreateCapsulesTable extends Migration
             $table->string('image');
             $table->decimal('price',6,2);
             $table->string('flavor');
+            $table->integer('stock');
         });
     }
 
