@@ -1,0 +1,96 @@
+/* Contenedor login y register */
+.contenedor-login,
+.contenedor-register{
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+#app{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* Fin contenedor login y register */
+/* Login y Register */
+/* .form-container {
+	max-width: 350px;
+	margin: 0 auto;
+}
+.form-container h1 {
+	text-align: center;
+	text-transform: uppercase;
+  font-size: 40px;
+  margin: 20px auto;
+  padding-top: 10px;
+}
+.field-group {
+	margin-bottom: 20px;
+}
+.access-form {
+	overflow: hidden;
+}
+.access-form label {
+	font-size: 16px;
+	margin-bottom: 5px;
+	display: inline-block;
+  color: #424242;
+}
+.access-form button {
+	font-size: 16px;
+  font-family: "Roboto",sans-serif;
+  background-color: #000;
+  color: #fff;
+  width: 55%;
+  padding: 8px 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+}
+.field-group input {
+	width: 100%;
+  border: 1px solid #ccc;
+  padding: 8px 38px 8px 8px;
+}
+.remember-me {
+	text-align: left;
+}
+.remember-me input {
+	width: auto;
+}
+.password p a {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.8em;
+  margin-top: 10px;
+  display: block;
+  text-align: right;
+}
+.password p a:hover{
+  color:rgba(0, 0, 0, 0.7);
+}
+.register h1 {
+	text-align: center;
+	text-transform: uppercase;
+  font-size: 40px;
+  margin: 20px auto;
+  padding-top: 10px;
+}
+.register h3 {
+	text-align: center;
+	text-transform: uppercase;
+  font-size: 20px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: black;
+  width: 20%;
+}
+.register h3 a {
+	text-decoration: none;
+  color:white;
+}
+.register h3 a:hover{
+	text-decoration: none;
+  color:#DDD;
+} */
+/* Fin Login y Register */

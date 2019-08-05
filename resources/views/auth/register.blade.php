@@ -1,7 +1,10 @@
-@extends('layouts.app')
-
+@extends('layouts.frontend')
+@section('css')
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<link href="{{ asset('css/stylesLoginRegister.css') }}" rel="stylesheet">
+@endsection
 @section('content')
-<div class="container">
+<div class="container contenedor-register">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
