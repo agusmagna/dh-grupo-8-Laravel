@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use \App\Capsula
 use Illuminate\Http\Request;
 
 class ProductosController extends Controller
@@ -13,7 +14,8 @@ class ProductosController extends Controller
      */
     public function index()
     {
-        //
+        $productosCapsulas = Capsula::all();
+        return view ('productosCapsulas');
     }
 
     /**
@@ -23,12 +25,12 @@ class ProductosController extends Controller
      */
     public function create(Request $form)
     {
-      $productoNuevo = new Producto();
-      $productoNuevo->name = $form['name'];
-      $productoNuevo->description = $form['description'];
-      $productoNuevo->image =  $form['image'];
-      $productoNuevo->price =  $form['price'];
-      $productoNuevo->flavor =  $form['flavor'];
+      $capsulaNueva = new Capsula();
+      $capsulaNueva->name = $form['name'];
+      $capsulaNueva->description = $form['description'];
+      $capsulaNueva->image =  $form['image'];
+      $capsulaNueva->price =  $form['price'];
+      $capsulaNueva->flavor =  $form['flavor'];
 
       $productoNuevo->save();
     }

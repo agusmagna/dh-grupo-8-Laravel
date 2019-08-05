@@ -1,14 +1,21 @@
-@extends('layouts.app')
+@extends('layouts.frontend')
+@section('headScript')
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+@endsection
+
+@section('css')
+  <link rel="stylesheet" href="{{asset('css/app.css')}}">
+@endsection
 
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Agregar un producto nuevo:') }}</div>
+                    <div class="card-header">{{ __('Agregar una cápsula nueva:') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="/agregarProducto" enctype="multipart/form-data">
+                        <form method="POST" action="/agregarCapsula" enctype="multipart/form-data">
                             @csrf
                     <div class="form-group row">
                         <label for="category" class="col-md-4 col-form-label text-md-right"> {{ __('Categoría:') }} </label>
@@ -28,7 +35,7 @@
                       </div>
                     </div>
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre del Producto:') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre de la Cápsula:') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>

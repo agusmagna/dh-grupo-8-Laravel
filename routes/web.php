@@ -18,11 +18,15 @@ Route::get('/index', function () {
     return view('index');
 });
 
+Route::get('/contacto', function () {
+    return view('contacto');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/agregarProducto', function(){
-  return view ('agregarProducto');
+Route::get('/agregarCapsula', function(){
+  return view ('capsulas.agregarCapsula');
 });
-Route::post('/agregarProducto', 'CapsulasController@create');
+Route::post('/agregarCapsula', 'CapsulasController@create');

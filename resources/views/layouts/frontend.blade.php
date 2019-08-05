@@ -39,15 +39,15 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                       @if(strpos($_SERVER['SCRIPT_FILENAME'],'index.php'))
-                        <li><a href="index.php">Inicio</a></li>
+                        <li><a href="{{ url('/index') }}">Inicio</a></li>
                         <li><a href="#quienes-somos">Conocenos</a></li>
                         <li><a href="#productos">Productos</a></li>
-                        <li><a href="contacto.php">Contacto</a></li>
+                        <li><a href="{{ url('/contacto') }}">Contacto</a></li>
                       @else
-                      <li><a href="index.php">Inicio</a></li>
+                      <li><a href="{{ url('/index') }}">Inicio</a></li>
                       <li><a href="index.php#quienes-somos">Conocenos</a></li>
                       <li><a href="productos.php">Productos</a></li>
-                      <li><a href="contacto.php">Contacto</a></li>
+                      <li><a href="{{ url('/contacto') }}">Contacto</a></li>
                       @endif
                     </ul>
 
@@ -107,15 +107,15 @@
         </div>
         <ul>
           @if(strpos($_SERVER['SCRIPT_FILENAME'],'index.php'))
-            <li><a href="index.php">Inicio</a></li>
+            <li><a href="{{ url('/contacto') }}">Inicio</a></li>
             <li><a href="#quienes-somos">Conocenos</a></li>
             <li><a href="#productos">Productos</a></li>
-            <li><a href="contacto.php">Contacto</a></li>
+            <li><a href="{{ url('/contacto') }}">Contacto</a></li>
           @else
-          <li><a href="index.php">Inicio</a></li>
+          <li><a href="{{ url('/index') }}">Inicio</a></li>
           <li><a href="index.php#quienes-somos">Conocenos</a></li>
           <li><a href="productos.php">Productos</a></li>
-          <li><a href="contacto.php">Contacto</a></li>
+          <li><a href="{{ url('/contacto') }}">Contacto</a></li>
           @endif
         </ul>
         <div class="footer-capsulas">
