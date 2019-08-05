@@ -33,13 +33,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/agregarCapsula', function(){
-  return view ('productos.agregarCapsula');
+  return view ('admin/agregarCapsula');
 });
 
 Route::post('/agregarCapsula', 'CapsulasController@create');
 
 Route::get('/agregarMaquina', function(){
-  return view ('productos.agregarMaquina');
+  return view ('admin/agregarMaquina');
 });
 Route::post('/agregarMaquina', 'MaquinasController@create');
 
