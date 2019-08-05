@@ -1,0 +1,14 @@
+.productsList{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 10%;
+}
+.product{
+  margin: 10px auto;
+  width: 30%;
+}
+.product img{
+  width: 50%;
+  margin: 0 auto;
+}

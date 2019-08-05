@@ -25,8 +25,8 @@ class CapsulesTableSeeder extends Seeder
         [
           'name'=>'ChocoFudge',
           'description'=>'Puro chocolate húmedo, salpicado de nueces y chocolate belga semiamargo',
-          'imageCapsule'=>'/capsulas/choco-fugde.png',
-          'imageProduct'=>'/producto_final/choco-fudge.png',
+          'imageCapsule'=>'/capsulas/chocofudge.png',
+          'imageProduct'=>'/producto_final/chocofudge.png',
           'price'=>50.00,
           'flavor'=>'Chocolate',
           'stock'=>500,
@@ -65,7 +65,7 @@ class CapsulesTableSeeder extends Seeder
         [
           'name'=>'Scon cítrico',
           'description'=>'Scon crocante por fuera y suave en su interior con sabor a limón',
-          'imageCapsule'=>'/capsulas/scon-citrico-png',
+          'imageCapsule'=>'/capsulas/scon-citrico.png',
           'imageProduct'=>'/producto_final/scon-citrico.png',
           'price'=>50.00,
           'flavor'=>'Limón',

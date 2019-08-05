@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Machines extends Model
 {
-  public $guarded = [];p
+  public $guarded = [];
 }

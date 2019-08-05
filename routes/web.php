@@ -22,7 +22,11 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
-Route::get('/products', 'productsController@index');
+Route::get('/products/categories', function () {
+    return view('categories');
+});
+
+Route::get('/products/{category}', 'productsController@index');
 
 Auth::routes();
 

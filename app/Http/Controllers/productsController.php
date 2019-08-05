@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Capsules;
+use \App\Machines;
 
 class ProductsController extends Controller
 {
@@ -13,11 +14,19 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($category)
     {
-        $productosCapsulas = Capsules::all();
-        $machines = Machines::all();
-        return view ('products',['capsulas' => $productosCapsulas,'machines'=> $machines]);
+        if ($category == 'machines') {
+          $products = Machines::all();
+        return view ('products/machines',['products' => $products]);
+        } elseif($category == 'capsules'){
+          $products = Capsules::paginate(5);
+        return view ('products/capsules',['products' => $products]);
+      } else {
+        return view ('categories');
+      }
+
+
     }
 
     /**

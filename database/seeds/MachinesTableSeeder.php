@@ -15,7 +15,7 @@ class MachinesTableSeeder extends Seeder
         [
           'name'=>'White',
           'description'=>'Máquina con lugar para dos cáspsulas color blanco',
-          'image'=>'/machines/#FFFFFF.png',
+          'image'=>'/machines/FFFFFF.png',
           'price'=>5000.00,
           'color'=>'white',
           'stock'=>500,
@@ -23,8 +23,8 @@ class MachinesTableSeeder extends Seeder
         DB::table('machines')->insert(
           [
             'name'=>'Bone',
-            'description'=>'Máquina con lugar para dos cáspsulas colohueso',
-            'image'=>'/machines/#D7CDC5.png',
+            'description'=>'Máquina con lugar para dos cáspsulas color hueso',
+            'image'=>'/machines/D7CDC5.png',
             'price'=>5000.00,
             'color'=>'#D7CDC5',
             'stock'=>500,
@@ -33,7 +33,7 @@ class MachinesTableSeeder extends Seeder
           [
             'name'=>'Dark grayish orange',
             'description'=>'Máquina con lugar para dos cáspsulas color gris oscuro',
-            'image'=>'/machines/#5F5B57.png',
+            'image'=>'/machines/5F5B57.png',
             'price'=>5000.00,
             'color'=>'#5F5B57',
             'stock'=>500,
@@ -42,7 +42,7 @@ class MachinesTableSeeder extends Seeder
           [
             'name'=>'Grayish orange',
             'description'=>'Máquina con lugar para dos cáspsulas color naranja grisáceo',
-            'image'=>'/machines/#BCA99B.png',
+            'image'=>'/machines/BCA99B.png',
             'price'=>5000.00,
             'color'=>'#BCA99B',
             'stock'=>500,
@@ -51,7 +51,7 @@ class MachinesTableSeeder extends Seeder
           [
             'name'=>'Dark grayish violet',
             'description'=>'Máquina con lugar para dos cáspsulas color violeta grisáceo oscuro',
-            'image'=>'/machines/#5C535F.png',
+            'image'=>'/machines/5C535F.png',
             'price'=>5000.00,
             'color'=>'#5C535F',
             'stock'=>500,
@@ -60,7 +60,7 @@ class MachinesTableSeeder extends Seeder
           [
             'name'=>'Gray',
             'description'=>'Máquina con lugar para dos cáspsulas color gris',
-            'image'=>'/machines/#B9B5B0.png',
+            'image'=>'/machines/B9B5B0.png',
             'price'=>5000.00,
             'color'=>'#B9B5B0',
             'stock'=>500,
@@ -69,7 +69,7 @@ class MachinesTableSeeder extends Seeder
           [
             'name'=>'Dark blue',
             'description'=>'Máquina con lugar para dos cáspsulas color azul',
-            'image'=>'/machines/#4B647F.png',
+            'image'=>'/machines/4B647F.png',
             'price'=>5000.00,
             'color'=>'#4B647F',
             'stock'=>500,
