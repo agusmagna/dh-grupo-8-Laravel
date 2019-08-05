@@ -22,9 +22,7 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
-Route::get('/products', function () {
-    return view('products');
-});
+Route::get('/products', 'productsController@index');
 
 Auth::routes();
 
@@ -33,4 +31,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/agregarCapsula', function(){
   return view ('capsulas.agregarCapsula');
 });
-Route::post('/agregarCapsula', 'CapsulasController@create');
+Route::post('/agregarCapsula', 'productsController@create');

@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use \App\Capsula
-use Illuminate\Http\Request;
 
-class ProductosController extends Controller
+use Illuminate\Http\Request;
+use \App\Capsules;
+
+class ProductsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,9 @@ class ProductosController extends Controller
      */
     public function index()
     {
-        $productosCapsulas = Capsula::all();
-        return view ('productosCapsulas');
+        $productosCapsulas = Capsules::all();
+        $machines = Machines::all();
+        return view ('products',['capsulas' => $productosCapsulas,'machines'=> $machines]);
     }
 
     /**
@@ -25,7 +27,7 @@ class ProductosController extends Controller
      */
     public function create(Request $form)
     {
-      $capsulaNueva = new Capsula();
+      $capsulaNueva = new Capsules();
       $capsulaNueva->name = $form['name'];
       $capsulaNueva->description = $form['description'];
       $capsulaNueva->image =  $form['image'];
