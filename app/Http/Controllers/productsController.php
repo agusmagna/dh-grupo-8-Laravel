@@ -2,11 +2,6 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD:app/Http/Controllers/CapsulasController.php
-use \App\Capsula;
-=======
-
->>>>>>> a88a8325bf45281aa323bfb2fb4e0fb2db10989e:app/Http/Controllers/productsController.php
 use Illuminate\Http\Request;
 use \App\Capsules;
 use \App\Machines;
@@ -18,17 +13,24 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($category)
+    public function index()
     {
-<<<<<<< HEAD:app/Http/Controllers/CapsulasController.php
         $productosCapsulas = Capsula::all();
         //dd(compact('productosCapsulas'));
         return view('admin/paneladmin',compact('productosCapsulas'));
-=======
-        $productosCapsulas = Capsules::all();
-        $machines = Machines::all();
-        return view ('products',['capsulas' => $productosCapsulas,'machines'=> $machines]);
->>>>>>> 7aaa6c38ac99a078eebc77144f1da4cd55fff86d
+
+    }
+
+    public function directory($category){
+      if ($category == 'machines') {
+        $products = Machines::all();
+      return view ('products/machines',['products' => $products]);
+      } elseif($category == 'capsules'){
+        $products = Capsules::paginate(5);
+      return view ('products/capsules',['products' => $products]);
+    } else {
+      return view ('categories');
+    }
     }
 
     /**
