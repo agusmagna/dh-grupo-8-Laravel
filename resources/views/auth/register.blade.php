@@ -72,6 +72,7 @@
 
                             <div class="col-md-6">
                                 <select id="country_born" type="text" class="form-control @error('country_born') is-invalid @enderror" name="country_born" value="{{ old('country_born') }}" required autocomplete="country" autofocus>
+                                  <option value="" disabled selected>Seleccione un país</option>
                                   <option value="ar">Argentina</option>
                                   <option value="br">Brasil</option>
                                   <option value="bo">Bolivia</option>
@@ -121,10 +122,11 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('¿Cómo nos conoció?:') }}</label>
+                            <label for="source_referral" class="col-md-4 col-form-label text-md-right">{{ __('¿Cómo nos conoció?:') }}</label>
 
                             <div class="col-md-6">
                                 <select id="source_referral" type="text" class="form-control @error('source_referral') is-invalid @enderror" name="source_referral" value="{{ old('source_referral') }}" autocomplete="source_referral" autofocus>
+                                  <option value="" disabled selected>Seleccione una opción</option>
                                   <option value="po">Publicidad online</option>
                                   <option value="bu">Buscadores</option>
                                   <option value="vp">Vía Pública</option>

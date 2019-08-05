@@ -21,3 +21,8 @@ Route::get('/index', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/agregarProducto', function(){
+  return view ('agregarProducto');
+});
+Route::post('/agregarProducto', 'CapsulasController@create');
