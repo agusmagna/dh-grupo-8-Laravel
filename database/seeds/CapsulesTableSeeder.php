@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class CapsulesTableSeeder extends Seeder
 {
@@ -20,6 +21,8 @@ class CapsulesTableSeeder extends Seeder
           'price'=>50.00,
           'flavor'=>'Chocolate blanco y coco',
           'stock'=>500,
+          'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+          'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('capsules')->insert(
         [
@@ -30,6 +33,8 @@ class CapsulesTableSeeder extends Seeder
           'price'=>50.00,
           'flavor'=>'Chocolate',
           'stock'=>500,
+          'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+          'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('capsules')->insert(
         [
@@ -40,6 +45,8 @@ class CapsulesTableSeeder extends Seeder
           'price'=>50.00,
           'flavor'=>'Galleta',
           'stock'=>500,
+          'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+          'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('capsules')->insert(
         [
@@ -50,6 +57,8 @@ class CapsulesTableSeeder extends Seeder
           'price'=>50.00,
           'flavor'=>'Manzana',
           'stock'=>500,
+          'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+          'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('capsules')->insert(
         [
@@ -60,6 +69,8 @@ class CapsulesTableSeeder extends Seeder
           'price'=>50.00,
           'flavor'=>'Frambuesa',
           'stock'=>500,
+          'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+          'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('capsules')->insert(
         [
@@ -70,6 +81,8 @@ class CapsulesTableSeeder extends Seeder
           'price'=>50.00,
           'flavor'=>'Limón',
           'stock'=>500,
+          'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+          'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('capsules')->insert(
         [
@@ -80,6 +93,8 @@ class CapsulesTableSeeder extends Seeder
           'price'=>50.00,
           'flavor'=>'Queso',
           'stock'=>500,
+          'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+          'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('capsules')->insert(
         [
@@ -90,6 +105,8 @@ class CapsulesTableSeeder extends Seeder
           'price'=>50.00,
           'flavor'=>'Dulce de leche',
           'stock'=>500,
+          'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+          'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]
       );
     }

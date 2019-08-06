@@ -51,7 +51,11 @@ class ProductsController extends Controller
 
       $productoNuevo->save();
     }
-
+    public function home()
+    {
+      $productosCapsulas = Capsules::latest()->limit(4)->get();
+      return view ('index',['products' => $productosCapsulas]);
+    }
     /**
      * Store a newly created resource in storage.
      *

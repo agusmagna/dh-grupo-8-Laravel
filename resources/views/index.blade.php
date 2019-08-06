@@ -1,25 +1,3 @@
-<?php
-session_start();
-$productosCapsulas = [];
-$saboresCodigo = ['chocofudge', 'blondie', 'scon','cookies','muffin', 'coquitos', 'crumble',];
-$sabores = ['Chocofudge','Blondie','Scon','Cookies de avena','Muffin','Coquitos','Crumble de manzana',];
-$precios = [];
-
-for ($i=0; $i < count($saboresCodigo); $i++) {
-  $key=$saboresCodigo[$i];
-  $precios[$key]="$ 30";
-}
-$precios["chocofudge"]='$ 35';
-
-foreach ($saboresCodigo as $key => $value) {
-  $productosCapsulas[$key]["titulo"] = $sabores[$key];
-  $productosCapsulas[$key]["imagen"] = 'images/producto/producto-' . $value . ".png";
-  $productosCapsulas[$key]["precio"] = $precios[$value] . ' c/u';
-}
-
-
- ?>
-
 @extends('layouts.frontend')
 @section('headScript')
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -102,24 +80,24 @@ foreach ($saboresCodigo as $key => $value) {
           <img src="{{asset('images/maquinasx6.png')}}" alt="Máquinas en distintos colores">
         </div>
         <h2>¿Todavía no tenés la tuya?</h2>
-        <h2>Comprala <a href="comprar.php">acá</a> </h2>
+        <h2>Comprala <a href="{{url('/products/machines')}}">acá</a> </h2>
       </article>
       <article class="capsulas">
         <h1>Cápsulas <br> destacadas</h1>
         <div class="productos-destacados">
-          <?php for ($i=0;$i<4;$i++):?>
+          @foreach($products as $product)
             <div class="producto">
               <div class="imagen">
-                <img src="<?= $productosCapsulas[$i]["imagen"];?>" alt="producto">
+                <img src="{{Storage::url($product->imageCapsule)}}" alt="producto">
               </div>
               <div class="titulo">
-                <?=$productosCapsulas[$i]["titulo"];?>
+                {{$product->name}}
               </div>
               <div class="precio">
-                <?=$productosCapsulas[$i]["precio"];?>
+                {{$product->price}}
               </div>
             </div>
-            <?php endfor ?>
+            @endforeach
           </div>
       </article>
     </div>

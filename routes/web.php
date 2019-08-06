@@ -14,9 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/index', function () {
-    return view('index');
-});
+Route::get('/index','productsController@home');
 
 Route::get('/contacto', function () {
     return view('contacto');
@@ -36,7 +34,7 @@ Route::get('/agregarCapsula', function(){
   return view ('admin/agregarCapsula');
 });
 
-Route::post('/agregarCapsula', 'CapsulasController@create');
+Route::post('/agregarCapsula', 'productsController@create');
 
 Route::get('/agregarMaquina', function(){
   return view ('admin/agregarMaquina');

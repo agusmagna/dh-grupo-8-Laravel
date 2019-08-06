@@ -119,7 +119,7 @@ body {
   display: flex;
   justify-content: space-around;
 }
-#productos .maquinas
+#productos .maquinas,
 #productos .capsulas {
   width: 50%;
 }
