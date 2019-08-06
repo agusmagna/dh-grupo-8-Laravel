@@ -42,3 +42,6 @@ Route::get('/agregarMaquina', function(){
   return view ('admin/agregarMaquina');
 });
 Route::post('/agregarMaquina', 'productsController@create_machine');
+
+Route::post('/borrarMaquina', 'productsController@deleteMachine');
+Route::post('/borrarCapsula', 'productsController@deleteCapsule');

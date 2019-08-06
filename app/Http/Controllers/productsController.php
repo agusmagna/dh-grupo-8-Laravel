@@ -16,24 +16,23 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    /*public function index()
+    public function index()
     {
         $productosMaquinas = Machines::all();
         $productosCapsulas = Capsules::all();
 
-        return view('admin/panelAdmin',[
+        return view('admin.panelAdmin',[
           'machines'=> $productosMaquinas,
           'capsules'=> $productosCapsulas
 
         ]);
+    }
 
-    }*/
-
-  public function index()
+  /*public function index()
     {
       $productosCapsulas = Capsules::all();
       return view('admin/panelAdmin',compact('productosCapsulas'));
-    }
+    }*/
 
     public function directory($category){
       if ($category == 'machines') {
@@ -76,16 +75,23 @@ class ProductsController extends Controller
 
       $capsulaNueva->name = $form['name'];
       $capsulaNueva->description = $form['description'];
-      $capsulaNueva->imageCapsule =  $form['imageCapsule'];
-      $capsulaNueva->imageProduct =  $form['imageProduct'];
+      $capsulaNueva->imageCapsule =  $form->file('imageCapsule')->store('public/capsules');
+      $capsulaNueva->imageProduct =  $form->file('imageProduct')->store('public/capsules');
       $capsulaNueva->price =  $form['price'];
-      $capsulaNueva->flavor =  $form['flavor'];
+      $capsulaNueva->flavor = $form['flavor'];
       $capsulaNueva->stock =  $form['stock'];
 
       $capsulaNueva->save();
       return redirect ('panelAdmin');
     }
+    public function deleteCapsule(Request $form)
+    {
+      $id = $form['id'];
+      $productosCapsulas = Capsules::find($id);
+      $productosCapsulas->delete();
 
+      return redirect ('panelAdmin');
+    }
 
 
 
@@ -119,6 +125,17 @@ class ProductsController extends Controller
       $MaquinaNuevo->save();
       return redirect ('panelAdmin');
     }
+
+    public function deleteMachine(Request $form)
+    {
+      $id = $form['id'];
+      $maquina = Machines::find($id);
+      $maquina->delete();
+
+      return redirect ('panelAdmin');
+    }
+
+
     public function home()
     {
       $productosCapsulas = Capsules::latest()->limit(4)->get();
