@@ -15,6 +15,15 @@
                     <div class="card-header">{{ __('Agregar una máquina nueva:') }}</div>
 
                     <div class="card-body">
+
+                      <ul class="errores" style="color:red">
+                        @foreach($errors->all() as $error)
+                          <li>
+                            {{$error}}
+                          </li>
+                        @endforeach
+                      </ul>
+
                         <form method="POST" action="/agregarMaquina" enctype="multipart/form-data">
                             @csrf
 
@@ -57,7 +66,7 @@
                             @enderror
                         </div>
                     </div>
-                    
+
                     <div class="form-group row">
                         <label for="price" class="col-md-4 col-form-label text-md-right">{{ __('Precio:') }}</label>
 
@@ -72,12 +81,12 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="flavor" class="col-md-4 col-form-label text-md-right">{{ __('Sabor:') }}</label>
+                    <label for="color" class="col-md-4 col-form-label text-md-right">{{ __('Color:') }}</label>
 
                     <div class="col-md-6">
-                        <input id="flavor" type="text" class="form-control @error('name') is-invalid @enderror" name="flavor" value="{{ old('flavor') }}" required autocomplete="flavor" autofocus>
+                        <input id="color" type="text" class="form-control @error('color') is-invalid @enderror" name="color" value="{{ old('color') }}" required autocomplete="color" autofocus>
 
-                        @error('flavor')
+                        @error('color')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>

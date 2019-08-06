@@ -1,0 +1,44 @@
+
+<section id="tableMachines">
+<table class="table">
+  <thead>
+    <h3>Máquinas</h3>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre de la Máquina</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Imagen</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Color</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach ($productosMaquinas as $maquina)
+      <tr>
+        <th scope="row">{{$maquina->id}}</th>
+        <td>{{$maquina->name}}</td>
+        <td>{{$maquina->description}}</td>
+        <td>{{$maquina->imageCapsule}}</td>
+        <td>{{$maquina->price}}</td>
+        <td>{{$maquina->color}}</td>
+        <td>{{$maquina->stock}}</td>
+        <td>
+          <form class="" action="index.html" method="post">
+
+            <button type="submit" class="btn btn-warning">Editar</button>
+          </form>
+        </td>
+        <td>
+          <form class="" action="index.html" method="post">
+
+            <button type="submit" class="btn btn-danger">x</button>
+          </form>
+        </td>
+      </tr>
+      @endforeach
+  </tbody>
+</table>
+</section>

@@ -8,7 +8,8 @@ body {
 	font-family: 'Syncopate',sans-serif;
 	color: #000;
   font-size: 1rem;
-  background-image: url('/images/bcgProducts3.png');
+  background-color: white;
+  /*background-image: url('/images/bcgProducts3.png');*/
 }
 .categorias h1{
   text-align: center;
