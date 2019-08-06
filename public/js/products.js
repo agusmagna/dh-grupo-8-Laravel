@@ -15,7 +15,6 @@ for(close of closes){
 close.addEventListener('click', function(e){
   console.log(e);
   e.target.parentElement.closest('.detail').style.display = 'none';
-  console.log(e.target.parentElement.closest('.detail'))
 });
 }
 

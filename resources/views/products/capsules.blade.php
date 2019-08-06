@@ -10,7 +10,7 @@
 
 
 @section('content')
-<h1>Cápsulas</h1>
+<h1 class='title'>Elije tus cápsulas</h1>
   <div class="productsList">
   @foreach($products as $product)
   <div class="product">

@@ -2,13 +2,20 @@
   height: 100vh;
 }
 body{
-  font-style: 'Reboto', sans-serif;
+  font-family: 'Reboto', sans-serif;
+}
+.title{
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  margin: 5vh auto;
+  text-align: center;
 }
 .productsList{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 10%;
+  margin-bottom: 5vh;
 }
 .product{
   margin: 10px auto;
@@ -36,6 +43,14 @@ body{
 }
 .botones a:first-child{
   margin-right: 1%;
+}
+.btn-primary{
+  background-color: black;
+  border-color: black;
+}
+.btn-primary:hover{
+  background-color: #333;
+  border-color: #333;
 }
 
 /* Styles productDetails */
@@ -71,36 +86,36 @@ body{
 
 }
 
-.productDetails .pDImages{
+.productDetails .pdImageProduct{
+  width: 40%;
+  margin-right: 10%;
+}
+.productDetails .pdImageProduct img{
+  width: 100%;
+  display: block;
+}
+.productDetails .pdTitle{
   display: flex;
 }
-.productDetails .pDImages .changeImage{
-  display:flex;
-  flex-direction: column;
-  width: 20%;
-  padding: 5px;
+.productDetails .pdTitle h5{
+  text-transform: uppercase;
+  margin-bottom: 7%;
+  margin-right: 7%;
 }
-.productDetails .pDImages .changeImage img{
-  display: block;
+.productDetails .pdTitle .pdCapsule{
+  width: 10%;
+}
+.productDetails .pdTitle .pdCapsule img{
   width: 100%;
-  margin: 20px 0;
 }
-.productDetails .pDCarousel{
-  width: 40%;
-  margin-left: 10%;
-  margin-right: 15%;
+
+.productDetails .pdImageProduct img{
+  width: 100%;
 }
-.productDetails .pDCarousel .capsuleCarousel{
-  width: 30%;
-  display: block;
-}
+
 .productDetails .pDdescription{
   display: flex;
   flex-direction: column;
-}
-.productDetails .pDdescription h5{
-  text-transform: uppercase;
-  margin-bottom: 7%;
 }
 .productDetails .pDdescription .quantity{
   margin-bottom: 10%;
