@@ -1,3 +1,6 @@
+body{
+  font-style: 'Reboto', sans-serif;
+}
 .productsList{
   display: flex;
   justify-content: space-between;
@@ -6,9 +9,45 @@
 }
 .product{
   margin: 10px auto;
+  width: 40%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.product .image{
   width: 30%;
 }
-.product img{
-  width: 50%;
+.product .description{
+  width: 70%;
+}
+.product .image img{
+  width: 100%;
+  padding: 20px;
+
+}
+.botones{
+  display: flex;
+}
+.botones a{
+  margin: 0 auto
+}
+.botones a:first-child{
+  margin-right: 1%;
+}
+
+/* Styles productDetails */
+.productDetails{
+  display: flex;
+  width: 60%;
   margin: 0 auto;
+  background-color: : white;
+
+}
+.productDetails .pDImages{
+  display: flex;
+}
+.productDetails .pDImages .changeImage{
+  display:flex;
+  flex-direction: column;
+
 }

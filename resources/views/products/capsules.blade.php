@@ -14,19 +14,41 @@
   <div class="productsList">
   @foreach($products as $product)
   <div class="product">
-  <div class="card" style="width: 18rem;">
-    <img src="{{Storage::url($product->imageCapsule)}}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <!-- <img src="{{Storage::url($product->imageCapsule)}}" alt=""> -->
-      <h5 class="card-title">{{$product->name}}</h5>
-      <p class="card-text">{{$product->description}}</p>
-      <a href="#" class="btn btn-primary">Agregar al carrito</a>
+    <div class="image">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="{{Storage::url($product->imageProduct)}}" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{Storage::url($product->imageCapsule)}}" alt="Second slide">
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
+    <div class="description">
+      <h5 class="">{{$product->name}}</h5>
+      <p class="">{{$product->price}}</p>
+      <div class="botones">
+        <a href="#" class="btn btn-primary">Ver detalle</a>
+        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+      </div>
+    </div>
+
   </div>
   @endforeach
   </div>
   {{$products->links()}}
+
+
 @endsection
 
 @section('finalScript')
