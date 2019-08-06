@@ -40,7 +40,7 @@ class ProductsController extends Controller
         $products = Machines::all();
       return view ('products/machines',['products' => $products]);
       } elseif($category == 'capsules'){
-        $products = Capsules::paginate(5);
+        $products = Capsules::paginate(6);
       return view ('products/capsules',['products' => $products]);
     } else {
       return view ('categories');
