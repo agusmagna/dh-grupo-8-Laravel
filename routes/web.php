@@ -30,17 +30,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/panelAdmin', 'productsController@index');
+//Route::get('/panelAdmin', 'productsController@indexMachines');
+
 Route::get('/agregarCapsula', function(){
   return view ('admin/agregarCapsula');
 });
-
-Route::post('/agregarCapsula', 'productsController@create');
+Route::post('/agregarCapsula', 'productsController@create_capsule');
 
 Route::get('/agregarMaquina', function(){
   return view ('admin/agregarMaquina');
 });
-Route::post('/agregarMaquina', 'MaquinasController@create');
-
-Route::get('/panelAdmin', 'productsController@index');
-
-Route::post('/agregarCapsula', 'productsController@create');
+Route::post('/agregarMaquina', 'productsController@create_machine');
