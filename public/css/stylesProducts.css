@@ -52,9 +52,12 @@ body{
   left: 15%;
 }
 
-.productSlide .close{
+.productSlide i{
   color: #CCC;
   font-size: 20px;
+  position: relative;
+  left:95%;
+  top: 5vh;
 }
 .productSlide i:hover{
   color: #999;

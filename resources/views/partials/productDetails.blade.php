@@ -1,6 +1,6 @@
 
 <div class="productSlide">
-  <span class='close'><i class="fas fa-times"></i></span>
+  <i class="fas fa-times"></i>
   <div class="productDetails">
     <div class="pDImages">
       <div class="changeImage">
