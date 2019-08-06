@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://kit.fontawesome.com/25a72e0cf0.js"></script>
     @yield('headScript')
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

@@ -1,3 +1,6 @@
+#app{
+  height: 100vh;
+}
 body{
   font-style: 'Reboto', sans-serif;
 }
@@ -36,18 +39,69 @@ body{
 }
 
 /* Styles productDetails */
+.detail{
+  display: none;
+}
+.productSlide{
+  width: 70%;
+  margin: 10vh auto;
+  background-color: white;
+  position: fixed;
+  z-index: 1500;
+  top: 5vh;
+  left: 15%;
+}
+
+.productSlide .close{
+  color: #CCC;
+  font-size: 20px;
+}
+.productSlide i:hover{
+  color: #999;
+}
 .productDetails{
   display: flex;
-  width: 60%;
-  margin: 0 auto;
-  background-color: : white;
+  padding: 40px;
+  padding-top: 10vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-height: 60vh;
 
 }
+
 .productDetails .pDImages{
   display: flex;
 }
 .productDetails .pDImages .changeImage{
   display:flex;
   flex-direction: column;
-
+  width: 20%;
+  padding: 5px;
+}
+.productDetails .pDImages .changeImage img{
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+}
+.productDetails .pDCarousel{
+  width: 40%;
+  margin-left: 10%;
+  margin-right: 15%;
+}
+.productDetails .pDCarousel .capsuleCarousel{
+  width: 30%;
+  display: block;
+}
+.productDetails .pDdescription{
+  display: flex;
+  flex-direction: column;
+}
+.productDetails .pDdescription h5{
+  text-transform: uppercase;
+  margin-bottom: 7%;
+}
+.productDetails .pDdescription .quantity{
+  margin-bottom: 10%;
+}
+.pDboton{
+  align-self:flex-end;
 }
