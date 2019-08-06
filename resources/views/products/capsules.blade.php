@@ -38,7 +38,7 @@
       <h5 class="">{{$product->name}}</h5>
       <p class="">$ {{$product->price}}</p>
       <div class="botones">
-        <p href="" class="btn btn-primary detailButton">Ver detalle</p>
+        <a href="#" class="btn btn-primary detailButton">Ver detalle</a>
         <a href="#" class="btn btn-primary">Agregar al carrito</a>
       </div>
     </div>
