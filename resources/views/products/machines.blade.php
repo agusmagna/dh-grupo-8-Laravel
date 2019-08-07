@@ -10,22 +10,27 @@
 
 
 @section('content')
-<div class="productsList">
+<h1 class='title'>Elije tu máquina favorita</h1>
 
+<div class="productsList MachinesList">
 
   @foreach($products as $product)
-  <div class="product">
-
-
-  <div class="card" style="width: 18rem;">
-    <img src="{{Storage::url($product->image)}}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <!-- <img src="{{Storage::url($product->image)}}" alt=""> -->
-      <h5 class="card-title">{{$product->name}}</h5>
-      <p class="card-text">{{$product->description}}</p>
-      <a href="#" class="btn btn-primary">Agregar al carrito</a>
+  <div class="productMachine">
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="{{Storage::url($product->image)}}" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{$product->name}}</h5>
+            <p class="card-text">{{$product->description}}</p>
+            <p class="card-text"><small class="text-muted">Precio: $ {{$product->price}}</small></p>
+            <a href="#" class="btn btn-primary">Agregar al carrito</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
   </div>
   @endforeach
 

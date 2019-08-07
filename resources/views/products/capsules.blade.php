@@ -10,7 +10,20 @@
 
 
 @section('content')
-<h1>Cápsulas</h1>
+<div class="contenedor">
+
+
+<h1 class='title'>Elije tus cápsulas</h1>
+  <div class="buscador">
+    <form class="" action="{{url('/capsulesSearch')}}" method="get">
+      <label for="quest"><h5>¿Qué producto buscás?</h5></label>
+      <input type="text" name="quest" value="">
+      <button class="btn btn-primary">Encuentra mi producto</button>
+    </form>
+  </div>
+    @if($products->isEmpty())
+    <p class='productoNoEncontrado'>Ups! No hemos encontrado ningún producto con ese nombre</p>
+    @endif
   <div class="productsList">
   @foreach($products as $product)
   <div class="product">
@@ -39,7 +52,7 @@
       <p class="">$ {{$product->price}}</p>
       <div class="botones">
         <a href="#" class="btn btn-primary detailButton">Ver detalle</a>
-        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+        <a href="{{url('/cart/addcapsule')}}" class="btn btn-primary">Agregar al carrito</a>
       </div>
     </div>
   </div>
@@ -48,11 +61,15 @@
   </div>
 
   @endforeach
+
   </div>
-
+@if(sizeof($products) > 1)
   {{$products->links()}}
-
-
+@endif
+  <div class="verTodos">
+    <a href="{{url('/products/capsules')}}" class="btn btn-primary">Ver todos los productos</a>
+  </div>
+</div>
 @endsection
 
 @section('finalScript')

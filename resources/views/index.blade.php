@@ -80,25 +80,29 @@
           <img src="{{asset('images/maquinasx6.png')}}" alt="Máquinas en distintos colores">
         </div>
         <h2>¿Todavía no tenés la tuya?</h2>
-        <h2>Comprala <a href="{{url('/products/machines')}}">acá</a> </h2>
+        <h2><a href="{{url('/products/machines')}}">Comprala acá</a> </h2>
       </article>
       <article class="capsulas">
         <h1>Cápsulas <br> destacadas</h1>
         <div class="productos-destacados">
           @foreach($products as $product)
             <div class="producto">
+              <a href="{{url('/capsulesSearch',$product->id)}}">
               <div class="imagen">
                 <img src="{{Storage::url($product->imageCapsule)}}" alt="producto">
               </div>
               <div class="titulo">
-                {{$product->name}}
+                <p>{{$product->name}}</p>
               </div>
               <div class="precio">
-                {{$product->price}}
+                <p>$ {{$product->price}}</p>
               </div>
             </div>
+            </a>
             @endforeach
+            <a href="{{url('/products/capsules')}}" class='verTodas'>Ver todas las cápsulas</a>
           </div>
+
       </article>
     </div>
   </section>

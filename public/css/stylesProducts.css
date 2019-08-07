@@ -2,23 +2,50 @@
   height: 100vh;
 }
 body{
-  font-style: 'Reboto', sans-serif;
+  font-family: 'Reboto', sans-serif;
+}
+.contenedor{
+
+
+}
+.title{
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  margin: 0 auto;
+  margin-bottom: 5vh;
+  text-align: center;
+  background-color: rgb(0,0,0);
+  color:white;
+  padding: 5vh 0;
+
+}
+.buscador{
+  margin: 2vh auto;
+  text-align: center;
+}
+.productoNoEncontrado{
+  text-align: center;
+  font-size: 1.7rem;
+  margin-top: 5vh;
 }
 .productsList{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 5vh;
   margin: 0 10%;
 }
+
 .product{
   margin: 10px auto;
-  width: 40%;
+  width: 49%;
   padding: 10px;
   display: flex;
   align-items: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 .product .image{
-  width: 30%;
+  width: 25%;
 }
 .product .description{
   width: 70%;
@@ -37,6 +64,27 @@ body{
 .botones a:first-child{
   margin-right: 1%;
 }
+.btn-primary{
+  background-color: black;
+  border-color: black;
+}
+.btn-primary:hover{
+  background-color: #333;
+  border-color: #333;
+}
+.pagination {
+ margin-left: 17%;
+}
+
+.verTodos{
+  margin: 5vh auto;
+  width: 20%;
+}
+.verTodos a{
+  width: 100%;
+}
+
+
 
 /* Styles productDetails */
 .detail{
@@ -52,9 +100,12 @@ body{
   left: 15%;
 }
 
-.productSlide .close{
+.productSlide i{
   color: #CCC;
   font-size: 20px;
+  position: relative;
+  left:95%;
+  top: 5vh;
 }
 .productSlide i:hover{
   color: #999;
@@ -68,36 +119,36 @@ body{
 
 }
 
-.productDetails .pDImages{
+.productDetails .pdImageProduct{
+  width: 40%;
+  margin-right: 10%;
+}
+.productDetails .pdImageProduct img{
+  width: 100%;
+  display: block;
+}
+.productDetails .pdTitle{
   display: flex;
 }
-.productDetails .pDImages .changeImage{
-  display:flex;
-  flex-direction: column;
-  width: 20%;
-  padding: 5px;
+.productDetails .pdTitle h5{
+  text-transform: uppercase;
+  margin-bottom: 7%;
+  margin-right: 7%;
 }
-.productDetails .pDImages .changeImage img{
-  display: block;
+.productDetails .pdTitle .pdCapsule{
+  width: 10%;
+}
+.productDetails .pdTitle .pdCapsule img{
   width: 100%;
-  margin: 20px 0;
 }
-.productDetails .pDCarousel{
-  width: 40%;
-  margin-left: 10%;
-  margin-right: 15%;
+
+.productDetails .pdImageProduct img{
+  width: 100%;
 }
-.productDetails .pDCarousel .capsuleCarousel{
-  width: 30%;
-  display: block;
-}
+
 .productDetails .pDdescription{
   display: flex;
   flex-direction: column;
-}
-.productDetails .pDdescription h5{
-  text-transform: uppercase;
-  margin-bottom: 7%;
 }
 .productDetails .pDdescription .quantity{
   margin-bottom: 10%;

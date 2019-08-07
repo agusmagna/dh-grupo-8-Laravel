@@ -24,6 +24,12 @@ Route::get('/products/categories', function () {
     return view('categories');
 });
 
+Route::get('/capsulesSearch', 'productsController@searchCapsule');
+
+Route::get('/capsulesSearch/{id}', 'productsController@searchCapsuleById');
+
+Route::post('/cart/addcapsule', 'CartController@addCapsule');
+
 Route::get('/products/{category}', 'productsController@directory');
 
 Auth::routes();
@@ -31,7 +37,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/panelAdmin', 'productsController@index');
-//Route::get('/panelAdmin', 'productsController@indexMachines');
+
 
 Route::get('/agregarCapsula', function(){
   return view ('admin/agregarCapsula');

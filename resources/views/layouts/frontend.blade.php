@@ -20,6 +20,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     @yield('css')
     <link href="{{ asset('css/stylesLayoutFrontend.css') }}" rel="stylesheet">
 </head>
@@ -46,7 +47,7 @@
                         <li><a href="{{ url('/contacto') }}">Contacto</a></li>
                       @else
                       <li><a href="{{ url('/index') }}">Inicio</a></li>
-                      <li><a href="index#quienes-somos">Conocenos</a></li>
+                      <li><a href="{{ url('/index#quienes-somos') }}">Conocenos</a></li>
                       <li><a href="{{ url('/products/categories') }}">Productos</a></li>
                       <li><a href="{{ url('/contacto') }}">Contacto</a></li>
                       @endif
