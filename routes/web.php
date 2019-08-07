@@ -26,6 +26,8 @@ Route::get('/products/categories', function () {
 
 Route::get('/capsulesSearch', 'productsController@searchCapsule');
 
+Route::get('/capsulesSearch/{id}', 'productsController@searchCapsuleById');
+
 Route::post('/cart/addcapsule', 'CartController@addCapsule');
 
 Route::get('/products/{category}', 'productsController@directory');

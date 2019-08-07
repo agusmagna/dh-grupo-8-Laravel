@@ -87,19 +87,22 @@
         <div class="productos-destacados">
           @foreach($products as $product)
             <div class="producto">
+              <a href="{{url('/capsulesSearch',$product->id)}}">
               <div class="imagen">
                 <img src="{{Storage::url($product->imageCapsule)}}" alt="producto">
               </div>
               <div class="titulo">
-                {{$product->name}}
+                <p>{{$product->name}}</p>
               </div>
               <div class="precio">
-                {{$product->price}}
+                <p>$ {{$product->price}}</p>
               </div>
             </div>
+            </a>
             @endforeach
             <a href="{{url('/products/capsules')}}" class='verTodas'>Ver todas las cápsulas</a>
           </div>
+
       </article>
     </div>
   </section>
