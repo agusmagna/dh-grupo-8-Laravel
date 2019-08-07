@@ -10,6 +10,9 @@
 
 
 @section('content')
+<div class="contenedor">
+
+
 <h1 class='title'>Elije tus cápsulas</h1>
   <div class="buscador">
     <form class="" action="{{url('/capsulesSearch')}}" method="get">
@@ -66,6 +69,7 @@
   <div class="verTodos">
     <a href="{{url('/products/capsules')}}" class="btn btn-primary">Ver todos los productos</a>
   </div>
+</div>
 @endsection
 
 @section('finalScript')

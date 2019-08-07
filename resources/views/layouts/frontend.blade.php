@@ -47,7 +47,7 @@
                         <li><a href="{{ url('/contacto') }}">Contacto</a></li>
                       @else
                       <li><a href="{{ url('/index') }}">Inicio</a></li>
-                      <li><a href="index#quienes-somos">Conocenos</a></li>
+                      <li><a href="{{ url('/index#quienes-somos') }}">Conocenos</a></li>
                       <li><a href="{{ url('/products/categories') }}">Productos</a></li>
                       <li><a href="{{ url('/contacto') }}">Contacto</a></li>
                       @endif

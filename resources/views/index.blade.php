@@ -80,7 +80,7 @@
           <img src="{{asset('images/maquinasx6.png')}}" alt="Máquinas en distintos colores">
         </div>
         <h2>¿Todavía no tenés la tuya?</h2>
-        <h2>Comprala <a href="{{url('/products/machines')}}">acá</a> </h2>
+        <h2><a href="{{url('/products/machines')}}">Comprala acá</a> </h2>
       </article>
       <article class="capsulas">
         <h1>Cápsulas <br> destacadas</h1>
@@ -98,6 +98,7 @@
               </div>
             </div>
             @endforeach
+            <a href="{{url('/products/capsules')}}" class='verTodas'>Ver todas las cápsulas</a>
           </div>
       </article>
     </div>

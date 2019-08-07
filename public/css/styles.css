@@ -157,6 +157,15 @@ body {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
 }
+#productos .capsulas .verTodas {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color:black;
+}
+#productos .capsulas .verTodas:hover{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+}
 #productos .capsulas{
   flex-direction: column;
   display: flex;

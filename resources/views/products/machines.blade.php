@@ -12,7 +12,7 @@
 @section('content')
 <h1 class='title'>Elije tu máquina favorita</h1>
 
-<div class="productsList">
+<div class="productsList MachinesList">
 
   @foreach($products as $product)
   <div class="productMachine">
