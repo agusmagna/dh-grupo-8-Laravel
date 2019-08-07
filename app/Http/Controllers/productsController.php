@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Validator;
-use App\Http\Controllers\Controller;
+
+
 use Illuminate\Http\Request;
 use \App\Machines;
 use \App\Capsules;
@@ -169,9 +169,18 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editMachine($id)
+
     {
-        //
+        $maquina = Machines::find($id);
+        return view ('admin.editarMaquinas', ['maquina' =>$maquina]);
+    }
+
+    public function editCapsule($id)
+
+    {
+        $capsula = Capsules::find($id);
+        return view ('admin.editarCapsulas', ['capsula' =>$capsula]);
     }
 
     /**
@@ -195,5 +204,18 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function showMachineForm()
+    {
+      return view('admin/agregarMaquina' , [
+        'maquina' => new Machines
+      ]);
+    }
+    public function showCapsuleForm()
+    {
+      return view('admin/agregarCapsula' , [
+        'capsula' => new Capsules
+      ]);
     }
 }

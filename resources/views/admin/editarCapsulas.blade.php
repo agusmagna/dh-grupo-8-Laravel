@@ -8,14 +8,14 @@
 @endsection
 
 @section('content')
-    <div class="container contenedor-agregarMaquina">
+
+    <div class="container contenedor-agregarCapsula">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Agregar una máquina nueva:') }}</div>
+                    <div class="card-header">{{ __('Editar:') }}</div>
 
                     <div class="card-body">
-
                       <ul class="errores" style="color:red">
                         @foreach($errors->all() as $error)
                           <li>
@@ -24,22 +24,22 @@
                         @endforeach
                       </ul>
 
-                        <form method="POST" action="/agregarMaquina" enctype="multipart/form-data">
+                        <form method="POST" action="/editarCapsulas" enctype="multipart/form-data">
                             @csrf
 
-                          @include ('admin.formMaquinas')
-                          
-                          <div class="form-group row mb-0">
-                          <div class="col-md-6 offset-md-4">
-                          <button type="submit" class="btn btn-primary">
-                          {{ __('Agregar') }}
-                          </button>
-                          </div>
-                          </div>
-                  </form>
+@include('admin.FormCapsulas')
+
+            <div class="form-group row mb-0">
+                <div class="col-md-6 offset-md-4">
+                    <button type="submit" class="btn btn-primary">
+                        {{ __('Actualizar') }}
+                    </button>
                 </div>
-              </div>
             </div>
-          </div>
+          </form>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection
