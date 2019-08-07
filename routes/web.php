@@ -42,12 +42,14 @@ Route::get('/panelAdmin', 'productsController@index');
 Route::get('/agregarCapsula', function(){
   return view ('admin/agregarCapsula');
 });
-Route::post('/agregarCapsula', 'productsController@create_capsule');
+Route::get('/agregarMaquina', 'productsController@showMachineForm');
+Route::get('/agregarCapsula', 'productsController@showCapsuleForm');
 
-Route::get('/agregarMaquina', function(){
-  return view ('admin/agregarMaquina');
-});
+Route::post('/agregarCapsula', 'productsController@create_capsule');
 Route::post('/agregarMaquina', 'productsController@create_machine');
 
 Route::post('/borrarMaquina', 'productsController@deleteMachine');
 Route::post('/borrarCapsula', 'productsController@deleteCapsule');
+
+Route::get('/editarMaquina/{id}','productsController@editMachine');
+Route::get('/editarCapsula/{id}','productsController@editCapsule');

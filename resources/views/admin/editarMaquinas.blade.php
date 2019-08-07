@@ -12,7 +12,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Agregar una máquina nueva:') }}</div>
+                    <div class="card-header">{{ __('Editar:') }}</div>
 
                     <div class="card-body">
 
@@ -24,15 +24,14 @@
                         @endforeach
                       </ul>
 
-                        <form method="POST" action="/agregarMaquina" enctype="multipart/form-data">
+                        <form method="POST" action="/editarMaquinas" enctype="multipart/form-data">
                             @csrf
 
                           @include ('admin.formMaquinas')
-                          
                           <div class="form-group row mb-0">
                           <div class="col-md-6 offset-md-4">
                           <button type="submit" class="btn btn-primary">
-                          {{ __('Agregar') }}
+                          {{ __('Actualizar') }}
                           </button>
                           </div>
                           </div>

@@ -3,6 +3,7 @@
 @section('css')
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/stylesLoginRegister.css') }}" rel="stylesheet">
+<link href="{{ asset('css/stylesPanelAdmin.css') }}" rel="stylesheet">
 @endsection
 @section ('content')
 <h2>Listado de Productos</h2>
@@ -16,7 +17,7 @@
   <thead>
     <h3>Máquinas</h3>
     <a href="{{url('/agregarMaquina')}}" class="btn btn-primary">Agregar máquina</a>
-    <tr>
+    <tr class="header">
       <th scope="col">#</th>
       <th scope="col">Nombre de la Máquina</th>
       <th scope="col">Descripción</th>
@@ -34,15 +35,20 @@
         <th scope="row">{{$maquina->id}}</th>
         <td>{{$maquina->name}}</td>
         <td>{{$maquina->description}}</td>
-        <td><img src="{{Storage::url($maquina->image)}}" alt=""></td>
+        <td><img src="{{Storage::url($maquina->image)}}" alt="" class="imageMachine"></td>
         <td>{{$maquina->color}}</td>
         <td>{{$maquina->price}}</td>
         <td>{{$maquina->stock}}</td>
         <td>
-          <form class="" action="index.html" method="post">
+          <form class="" action="/editarMaquina/{{$maquina->id}}" method="get">
 
             <button type="submit" class="btn btn-warning">Editar</button>
           </form>
+
+          {{-- <form class="" action="{{ url('/editarMaquina/{{$maquina->id}}') }}" method="get">
+
+            <button type="submit" class="btn btn-warning">Editar</button>
+          </form> --}}
         </td>
         <td>
           <form class="" action="/borrarMaquina" method="post">
@@ -82,12 +88,12 @@
         <th scope="row">{{$capsula->id}}</th>
         <td>{{$capsula->name}}</td>
         <td>{{$capsula->description}}</td>
-        <td><img src="{{Storage::url($capsula->imageCapsule)}}" alt=""></td>
+        <td><img src="{{Storage::url($capsula->imageCapsule)}}" alt="" class="imageCapsule"></td>
         <td>{{$capsula->flavor}}</td>
         <td>{{$capsula->price}}</td>
         <td>{{$capsula->stock}}</td>
         <td>
-          <form class="" action="index.html" method="post">
+          <form class="" action="/editarCapsula/{{$capsula->id}}" method="get">
 
             <button type="submit" class="btn btn-warning">Editar</button>
           </form>
