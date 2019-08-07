@@ -28,6 +28,14 @@ class ProductsController extends Controller
         ]);
     }
 
+    public function searchCapsule(Request $request){
+
+      $productos = Capsules::where('name','like','%' . $request['quest'] . '%')->paginate(6);
+      return view('products/capsules',[
+        'products'=> $productos
+      ]);
+    }
+
   /*public function index()
     {
       $productosCapsulas = Capsules::all();

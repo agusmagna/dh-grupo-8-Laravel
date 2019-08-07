@@ -10,6 +10,15 @@ body{
   margin: 5vh auto;
   text-align: center;
 }
+.buscador{
+  margin: 2vh auto;
+  text-align: center;
+}
+.productoNoEncontrado{
+  text-align: center;
+  font-size: 1.7rem;
+  margin-top: 5vh;
+}
 .productsList{
   display: flex;
   justify-content: space-between;
@@ -52,6 +61,19 @@ body{
   background-color: #333;
   border-color: #333;
 }
+.pagination {
+ margin-left: 17%;
+}
+
+.verTodos{
+  margin: 5vh auto;
+  width: 20%;
+}
+.verTodos a{
+  width: 100%;
+}
+
+
 
 /* Styles productDetails */
 .detail{
