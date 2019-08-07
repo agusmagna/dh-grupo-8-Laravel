@@ -134,12 +134,12 @@ class ProductsController extends Controller
       $MaquinaNueva = new Machines();
       $MaquinaNueva->name = $form['name'];
       $MaquinaNueva->description = $form['description'];
-      $MaquinaNueva->image =  $form['image'];
+      $MaquinaNueva->image =  $form->file('image')->store('public/machines');
       $MaquinaNueva->price =  $form['price'];
       $MaquinaNueva->color =  $form['color'];
       $MaquinaNueva->stock =  $form['stock'];
 
-      $MaquinaNuevo->save();
+      $MaquinaNueva->save();
       return redirect ('panelAdmin');
     }
 
