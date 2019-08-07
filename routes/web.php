@@ -34,6 +34,8 @@ Route::get('/products/{category}', 'productsController@directory');
 
 Auth::routes();
 
+Route::get('/logout', 'LogoutController@logout');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/panelAdmin', 'productsController@index');
