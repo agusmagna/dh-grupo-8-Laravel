@@ -15,9 +15,7 @@
 <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Descripción:') }}</label>
 
 <div class="col-md-6">
-    <textarea name="description" rows="8" cols="80" class="form-control @error('description') is-invalid @enderror" value="{{ old('description', $maquina->description)}}">
-
-    </textarea>
+    <textarea name="description" rows="8" cols="80" class="form-control @error('description') is-invalid @enderror">{{ old('description', $maquina->description)}}</textarea>
 
     @error('description')
         <span class="invalid-feedback" role="alert">

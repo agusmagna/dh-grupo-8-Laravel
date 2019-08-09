@@ -11,7 +11,7 @@
             <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Descripción:') }}</label>
 
             <div class="col-md-6">
-                <textarea name="description" rows="8" cols="80" class="form-control" value="{{ old('description', $capsula->description) }}"> </textarea>
+                <textarea name="description" rows="8" cols="80" class="form-control">{{ old('description', $capsula->description) }}</textarea>
 
             </div>
         </div>

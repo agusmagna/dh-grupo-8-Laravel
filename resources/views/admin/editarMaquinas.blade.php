@@ -24,7 +24,7 @@
                         @endforeach
                       </ul>
 
-                        <form method="POST" action="/editarMaquinas" enctype="multipart/form-data">
+                        <form method="POST" action="/editarMaquina/{{$maquina->id}}" enctype="multipart/form-data">
                             @csrf
 
                           @include ('admin.formMaquinas')

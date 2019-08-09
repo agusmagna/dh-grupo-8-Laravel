@@ -12,11 +12,10 @@ class CapsulasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index_capsules()
+    public function index()
     {
-        $productosCapsulas = Capsules::all();
-        //dd(compact('productosCapsulas'));
-        return view('admin/paneladmin',compact('productosCapsulas'));
+      $productosCapsulas = Capsules::latest()->limit(4)->get();
+      return view ('index',['products' => $productosCapsulas]);
     }
 
     /**
@@ -26,16 +25,9 @@ class CapsulasController extends Controller
      */
     public function create(Request $form)
     {
-      $capsulaNueva = new Capsules();
-      $capsulaNueva->name = $form['name'];
-      $capsulaNueva->description = $form['description'];
-      $capsulaNueva->imageCapsule =  $form['imageCapsule'];
-      $capsulaNueva->imageProduct =  $form['imageProduct'];
-      $capsulaNueva->price =  $form['price'];
-      $capsulaNueva->flavor =  $form['flavor'];
-      $capsulaNueva->stock =  $form['stock'];
-
-      $productoNuevo->save();
+      return view('admin/agregarCapsula' , [
+        'capsula' => new Capsules
+      ]);
     }
 
     /**
@@ -44,9 +36,38 @@ class CapsulasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $form)
     {
-        //
+        $reglas= [
+          'name' => 'required|string|max:255',
+          'description' => 'required|string|max:255',
+          'imageCapsule' => 'mimetypes:image/png,image/jpeg,image/jpg',
+          'imageProduct' => 'mimetypes:image/png,image/jpeg,image/jpg',
+          'price' => 'required|numeric',
+          'flavor' => 'required|string|max:255',
+          'stock' => 'required|integer'
+        ];
+        $mensajes = [
+          'string'=> "El campo :attribute debe ser un texto",
+          'max'=> "El campo :attribute debe tener un máximo de :max",
+          'numeric'=> "El campo :attribute debe ser un número",
+          'integer'=> "El campo :attribute debe ser un número entero",
+          'mimetypes' => "El campo :attribute debe ser .png,.jpeg o .jpg"
+        ];
+        $this->validate($form, $reglas, $mensajes);
+
+        $capsulaNueva = new Capsules();
+
+        $capsulaNueva->name = $form['name'];
+        $capsulaNueva->description = $form['description'];
+        $capsulaNueva->imageCapsule =  $form->file('imageCapsule')->store('public/capsules');
+        $capsulaNueva->imageProduct =  $form->file('imageProduct')->store('public/capsules');
+        $capsulaNueva->price =  $form['price'];
+        $capsulaNueva->flavor = $form['flavor'];
+        $capsulaNueva->stock =  $form['stock'];
+
+        $capsulaNueva->save();
+        return redirect ('panelAdmin');
     }
 
     /**
@@ -55,9 +76,12 @@ class CapsulasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Capsules $id)
     {
-        //
+        $productos = Capsules::find($id);
+        return view('products/capsules',[
+          'products'=> $productos
+        ]);
     }
 
     /**
@@ -68,7 +92,8 @@ class CapsulasController extends Controller
      */
     public function edit($id)
     {
-        //
+      $capsula = Capsules::find($id);
+      return view ('admin.editarCapsulas', ['capsula' =>$capsula]);
     }
 
     /**
@@ -80,7 +105,17 @@ class CapsulasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $maquina = Capsules::findOrFail($id);
+
+      if ($request->hasFile('imageCapsule')) {
+        $maquina->image = $request->file('imageCapsule')->store('public/capsules');
+      }
+
+      $changes = array_diff($request->all(), $capsula->toArray());
+
+      $capsula->update($changes);
+
+      return back();
     }
 
     /**
@@ -89,8 +124,22 @@ class CapsulasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $form)
     {
-        //
+      $id = $form['id'];
+      $productosCapsulas = Capsules::find($id);
+      $productosCapsulas->delete();
+
+      return redirect ('panelAdmin');
+    }
+
+    public function search(Request $request)
+    {
+      $productos = Capsules::where('name','like','%' . $request['quest'] . '%')
+                    ->paginate(6);
+
+      return view('products/capsules',[
+        'products'=> $productos
+      ]);
     }
 }

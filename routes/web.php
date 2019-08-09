@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/index','productsController@home');
+Route::get('/index','CapsulasController@index');
 
 Route::get('/contacto', function () {
     return view('contacto');
@@ -24,9 +24,9 @@ Route::get('/products/categories', function () {
     return view('categories');
 });
 
-Route::get('/capsulesSearch', 'productsController@searchCapsule');
+Route::get('/capsulesSearch', 'CapsulasController@search');
 
-Route::get('/capsulesSearch/{id}', 'productsController@searchCapsuleById');
+Route::get('/capsulesSearch/{id}', 'CapsulasController@show');
 
 Route::post('/cart/addcapsule', 'CartController@addCapsule');
 
@@ -44,14 +44,16 @@ Route::get('/panelAdmin', 'productsController@index');
 Route::get('/agregarCapsula', function(){
   return view ('admin/agregarCapsula');
 });
-Route::get('/agregarMaquina', 'productsController@showMachineForm');
-Route::get('/agregarCapsula', 'productsController@showCapsuleForm');
+Route::get('/agregarMaquina', 'MaquinasController@create');
+Route::get('/agregarCapsula', 'CapsulasController@create');
 
-Route::post('/agregarCapsula', 'productsController@create_capsule');
-Route::post('/agregarMaquina', 'productsController@create_machine');
+Route::post('/agregarCapsula', 'CapsulasController@store');
+Route::post('/agregarMaquina', 'MaquinasController@store');
 
-Route::post('/borrarMaquina', 'productsController@deleteMachine');
-Route::post('/borrarCapsula', 'productsController@deleteCapsule');
+Route::post('/borrarMaquina', 'MaquinasController@destroy');
+Route::post('/borrarCapsula', 'CapsulasController@destroy');
 
-Route::get('/editarMaquina/{id}','productsController@editMachine');
-Route::get('/editarCapsula/{id}','productsController@editCapsule');
+Route::get('/editarMaquina/{id}','MaquinasController@edit');
+Route::get('/editarCapsula/{id}','CapsulasController@edit');
+
+Route::post('/editarMaquina/{id}','MaquinasController@update');

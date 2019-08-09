@@ -7,10 +7,14 @@
   width:50vh;
 }
 
+#tableMachines{
+margin: 30px 5%;
+}
+
 .imageMachine{
   width:20%;
 }
 
 .imageCapsule{
-  width:50%
+  width:30%
 }

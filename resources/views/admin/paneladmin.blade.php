@@ -6,6 +6,7 @@
 <link href="{{ asset('css/stylesPanelAdmin.css') }}" rel="stylesheet">
 @endsection
 @section ('content')
+<div id="#panelAdmin">
 <h2>Listado de Productos</h2>
 <ul>
   <li><a href="#tableMachines">Máquinas</a></li>
@@ -109,6 +110,7 @@
       @endforeach
   </tbody>
 </table>
+</div>
 </section>
 
 @endsection

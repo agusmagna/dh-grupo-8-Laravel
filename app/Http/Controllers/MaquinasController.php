@@ -26,15 +26,9 @@ class MaquinasController extends Controller
      */
      public function create(Request $form)
      {
-       $MaquinaNueva = new Machines();
-       $MaquinaNueva->name = $form['name'];
-       $MaquinaNueva->description = $form['description'];
-       $MaquinaNueva->image =  $form['image'];
-       $MaquinaNueva->price =  $form['price'];
-       $MaquinaNueva->flavor =  $form['flavor'];
-       $MaquinaNueva->stock =  $form['stock'];
-
-       $productoNuevo->save();
+         return view('admin/agregarMaquina' , [
+           'maquina' => new Machines
+         ]);
      }
     /**
      * Store a newly created resource in storage.
@@ -42,9 +36,35 @@ class MaquinasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $form)
     {
-        //
+        $reglas= [
+          'name' => 'required|string|max:255',
+          'description' => 'required|string|max:255',
+          'image' => 'mimetypes:image/png,image/jpeg,image/jpg',
+          'price' => 'required|numeric',
+          'color' => 'required|string|max:255',
+          'stock' => 'required|integer'
+        ];
+        $mensajes = [
+          'string'=> "El campo :attribute debe ser un texto",
+          'max'=> "El campo :attribute debe tener un máximo de :max",
+          'numeric'=> "El campo :attribute debe ser un número",
+          'integer'=> "El campo :attribute debe ser un número entero",
+          'mimetypes' => "El campo :attribute debe ser .png,.jpeg o .jpg"
+        ];
+        $this->validate($form, $reglas, $mensajes);
+
+        $MaquinaNueva = new Machines();
+        $MaquinaNueva->name = $form['name'];
+        $MaquinaNueva->description = $form['description'];
+        $MaquinaNueva->image =  $form->file('image')->store('public/machines');
+        $MaquinaNueva->price =  $form['price'];
+        $MaquinaNueva->color =  $form['color'];
+        $MaquinaNueva->stock =  $form['stock'];
+
+        $MaquinaNueva->save();
+        return redirect ('panelAdmin');
     }
 
     /**
@@ -66,7 +86,8 @@ class MaquinasController extends Controller
      */
     public function edit($id)
     {
-        //
+          $maquina = Machines::find($id);
+          return view ('admin.editarMaquinas', ['maquina' =>$maquina]);
     }
 
     /**
@@ -78,7 +99,17 @@ class MaquinasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $maquina = Machines::findOrFail($id);
+
+        if ($request->hasFile('image')) {
+          $maquina->image = $request->file('image')->store('public/machines');
+        }
+
+        $changes = array_diff($request->all(), $maquina->toArray());
+
+        $maquina->update($changes);
+
+        return back();
     }
 
     /**
@@ -87,8 +118,12 @@ class MaquinasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $form)
     {
-        //
+      $id = $form['id'];
+      $maquina = Machines::find($id);
+      $maquina->delete();
+
+      return redirect ('panelAdmin');
     }
 }
