@@ -97,19 +97,23 @@ class MaquinasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $form, $id)
     {
         $maquina = Machines::findOrFail($id);
 
-        if ($request->hasFile('image')) {
-          $maquina->image = $request->file('image')->store('public/machines');
-        }
 
-        $changes = array_diff($request->all(), $maquina->toArray());
 
-        $maquina->update($changes);
+        $maquina->name = $form['name'];
+        $maquina->description = $form['description'];
+        $maquina->image =  $form->file('image')->store('public/machines');
+        $maquina->price =  $form['price'];
+        $maquina->color =  $form['color'];
+        $maquina->stock =  $form['stock'];
 
-        return back();
+
+        $maquina->update();
+
+        return redirect ('panelAdmin');
     }
 
     /**
