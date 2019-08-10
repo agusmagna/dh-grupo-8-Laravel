@@ -24,6 +24,10 @@ Route::get('/sl', function(){
   Artisan::call('storage:link');
 });
 
+Route::get('/correrMigracion', function(){
+  Artisan::call('migrate');
+})
+
 Route::get('/products/categories', function () {
     return view('categories');
 });
