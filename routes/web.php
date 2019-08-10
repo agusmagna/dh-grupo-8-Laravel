@@ -20,7 +20,7 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
-Route::get('/storage', function(){
+Route::get('/sl', function(){
   Artisan::call('storage:link');
 });
 
