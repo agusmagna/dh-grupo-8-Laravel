@@ -26,7 +26,7 @@ Route::get('/sl', function(){
 
 Route::get('/correrMigracion', function(){
   Artisan::call('migrate');
-})
+});
 
 Route::get('/products/categories', function () {
     return view('categories');
