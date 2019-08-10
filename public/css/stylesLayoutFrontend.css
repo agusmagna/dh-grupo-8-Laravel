@@ -43,6 +43,7 @@ nav ul{
 }
 .logoutTigout{
   color:white;
+  text-decoration: none;
 }
 nav  ul li a:hover,
 .logoutTigout:hover,
@@ -51,19 +52,17 @@ footer ul li a:hover{
   cursor: pointer;
   text-decoration: none;
 }
-/* .login a{
+.profileIcon {
   color: white;
   float: right;
-  font-size: 0.7em;
+  font-size: 1.5em;
   text-decoration: none;
-  margin: auto 2%;
+  margin: auto 15%;
 }
-.login a:hover {
+.profileIcon:hover {
   color:rgba(255, 255, 255, 0.8);
 }
-.login a i {
-  font-size: 1.5rem;
-} */
+
 
 /* Navegador y Footer */
 

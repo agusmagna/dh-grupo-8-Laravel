@@ -66,8 +66,9 @@
                                 </li>
                             @endif
                         @else
+                          <a href="{{url('/profile')}}" class='profileIcon'><i class="far fa-user-circle"></i></a>
                           <a href="{{url('/logout')}}" class='logoutTigout'>Logout</a>
-                            <li class="nav-item dropdown">
+                            <!-- <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
@@ -83,7 +84,7 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
+                            </li> -->
                         @endguest
                     </ul>
                 </div>

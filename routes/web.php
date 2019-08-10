@@ -20,6 +20,10 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
+Route::get('/storage', function(){
+  Artisan::call('storage:link');
+});
+
 Route::get('/products/categories', function () {
     return view('categories');
 });
@@ -33,6 +37,8 @@ Route::post('/cart/addcapsule', 'CartController@addCapsule');
 Route::get('/products/{category}', 'productsController@directory');
 
 Auth::routes();
+
+Route::get('/profile', 'profileController@index');
 
 Route::get('/logout', 'LogoutController@logout');
 
