@@ -55,7 +55,7 @@ class RegisterController extends Controller
             'username' => ['required', 'string', 'max:255'],
             'country_born' => ['required', 'string', 'max:255'],
             'phone_number' => ['string', 'max:12'],
-            'avatar' => ['mimetypes:image/png,video/jpeg,image/jpg'],
+            'avatar' => ['mimetypes:image/png,image/jpeg,image/jpg'],
             'source_referral' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);

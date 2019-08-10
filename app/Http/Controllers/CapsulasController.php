@@ -105,17 +105,17 @@ class CapsulasController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $maquina = Capsules::findOrFail($id);
+      $capsula = Capsules::findOrFail($id);
 
       if ($request->hasFile('imageCapsule')) {
-        $maquina->image = $request->file('imageCapsule')->store('public/capsules');
+        $capsula->image = $request->file('imageCapsule')->store('public/capsules');
       }
 
       $changes = array_diff($request->all(), $capsula->toArray());
 
       $capsula->update($changes);
 
-      return back();
+      return redirect ('panelAdmin');
     }
 
     /**

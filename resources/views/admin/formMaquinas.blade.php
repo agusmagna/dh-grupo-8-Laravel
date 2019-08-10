@@ -28,7 +28,7 @@
 <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Imagen:') }}</label>
 
 <div class="col-md-6">
-    <input id="image" type="file"  name="image">
+    <input id="image" type="file"  name="image" required>
 
     @error('image')
         <span class="invalid-feedback" role="alert">

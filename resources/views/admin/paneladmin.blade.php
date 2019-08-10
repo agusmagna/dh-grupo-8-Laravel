@@ -6,18 +6,19 @@
 <link href="{{ asset('css/stylesPanelAdmin.css') }}" rel="stylesheet">
 @endsection
 @section ('content')
-<div id="#panelAdmin">
+<div id="panelAdmin">
 <h2>Listado de Productos</h2>
 <ul>
   <li><a href="#tableMachines">Máquinas</a></li>
   <li><a href="#tableCapsules">Cápsulas</a></li>
 </ul>
-
+</div>
 <section id="tableMachines">
 <table class="table">
+  <h3>Máquinas</h3>
+  <a href="{{url('/agregarMaquina')}}" class="btn btn-primary button">Agregar máquina</a>
+
   <thead>
-    <h3>Máquinas</h3>
-    <a href="{{url('/agregarMaquina')}}" class="btn btn-primary">Agregar máquina</a>
     <tr class="header">
       <th scope="col">#</th>
       <th scope="col">Nombre de la Máquina</th>
@@ -67,11 +68,11 @@
 
 <section id="tableCapsules">
 <table class="table">
-  <thead>
-    <h3>Cápsulas</h3>
-    <a href="{{url('/agregarCapsula')}}" class="btn btn-primary">Agregar cápsula</a>
+  <h3>Cápsulas</h3>
+  <a href="{{url('/agregarCapsula')}}" class="btn btn-primary button">Agregar cápsula</a>
 
-    <tr>
+  <thead>
+    <tr class="header">
       <th scope="col">#</th>
       <th scope="col">Nombre de la Cápsula</th>
       <th scope="col">Descripción</th>
@@ -110,7 +111,7 @@
       @endforeach
   </tbody>
 </table>
-</div>
+
 </section>
 
 @endsection

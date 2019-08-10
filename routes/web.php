@@ -57,3 +57,4 @@ Route::get('/editarMaquina/{id}','MaquinasController@edit');
 Route::get('/editarCapsula/{id}','CapsulasController@edit');
 
 Route::post('/editarMaquina/{id}','MaquinasController@update');
+Route::post('/editarCapsula/{id}','CapsulasController@update');

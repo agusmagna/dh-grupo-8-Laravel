@@ -24,7 +24,7 @@
                         @endforeach
                       </ul>
 
-                        <form method="POST" action="/editarCapsulas/{{$capsula->id}}" enctype="multipart/form-data">
+                        <form method="POST" action="/editarCapsula/{{$capsula->id}}" enctype="multipart/form-data">
                             @csrf
 
 @include('admin.FormCapsulas')

@@ -19,7 +19,7 @@
             <label for="imageCapsule" class="col-md-4 col-form-label text-md-right">{{ __('Imagen Cápsula:') }}</label>
 
             <div class="col-md-6">
-                <input id="imageCapsule" type="file"  name="imageCapsule">
+                <input id="imageCapsule" type="file"  name="imageCapsule" required>
 
             </div>
         </div>
@@ -27,7 +27,7 @@
             <label for="imageProduct" class="col-md-4 col-form-label text-md-right">{{ __('Imagen Producto:') }}</label>
 
             <div class="col-md-6">
-                <input id="imageProduct" type="file"  name="imageProduct">
+                <input id="imageProduct" type="file"  name="imageProduct" required>
 
             </div>
         </div>

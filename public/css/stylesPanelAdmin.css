@@ -3,18 +3,37 @@
   padding: 0;
   margin: 0;
 }
+
 .header{
   width:50vh;
+  font-weight: bold;
 }
 
-#tableMachines{
+#panelAdmin {
+margin: 30px 5%;
+}
+
+ul {
+  font-size: 20px;
+}
+
+.button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+th {
+width: 10%;
+}
+
+#tableMachines, #tableCapsules{
 margin: 30px 5%;
 }
 
 .imageMachine{
-  width:20%;
+  width:50%;
 }
 
 .imageCapsule{
-  width:30%
+  width:50%
 }
