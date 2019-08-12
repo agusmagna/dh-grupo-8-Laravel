@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'CapsulasController@index');
 Route::get('/index','CapsulasController@index');
 
 Route::get('/contacto', function () {
@@ -48,23 +46,32 @@ Route::get('/logout', 'LogoutController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/panelAdmin', 'productsController@index');
+Route::group([
+  'middleware' => ['auth','role:admin']
+], function () {
+  Route::get('/panelAdmin', 'productsController@index');
 
 
-Route::get('/agregarCapsula', function(){
-  return view ('admin/agregarCapsula');
+  Route::get('/agregarCapsula', function(){
+    return view ('admin/agregarCapsula');
+  });
+  Route::get('/agregarMaquina', 'MaquinasController@create');
+  Route::get('/agregarCapsula', 'CapsulasController@create');
+
+  Route::post('/agregarCapsula', 'CapsulasController@store');
+  Route::post('/agregarMaquina', 'MaquinasController@store');
+
+  Route::post('/borrarMaquina', 'MaquinasController@destroy');
+  Route::post('/borrarCapsula', 'CapsulasController@destroy');
+
+  Route::get('/editarMaquina/{id}','MaquinasController@edit');
+  Route::get('/editarCapsula/{id}','CapsulasController@edit');
+
+  Route::post('/editarMaquina/{id}','MaquinasController@update');
+  Route::post('/editarCapsula/{id}','CapsulasController@update');
+
 });
-Route::get('/agregarMaquina', 'MaquinasController@create');
-Route::get('/agregarCapsula', 'CapsulasController@create');
 
-Route::post('/agregarCapsula', 'CapsulasController@store');
-Route::post('/agregarMaquina', 'MaquinasController@store');
-
-Route::post('/borrarMaquina', 'MaquinasController@destroy');
-Route::post('/borrarCapsula', 'CapsulasController@destroy');
-
-Route::get('/editarMaquina/{id}','MaquinasController@edit');
-Route::get('/editarCapsula/{id}','CapsulasController@edit');
-
-Route::post('/editarMaquina/{id}','MaquinasController@update');
-Route::post('/editarCapsula/{id}','CapsulasController@update');
+Route::get('/notAdmin', function () {
+    return view('admin/notAdmin');
+});
