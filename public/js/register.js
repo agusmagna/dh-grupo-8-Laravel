@@ -7,9 +7,6 @@
       return respuestaAPI.json();
     })
     .then(function(respuestaPaises) {
-      selectPaises.innerHTML = `
-        <option value="" disabled selected>Seleccione una pais...</option>
-      `;
       for(let unPais of respuestaPaises) {
         let optionPais = document.createElement('option');
         optionPais.setAttribute('value', unPais.id);
