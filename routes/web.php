@@ -49,7 +49,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group([
   'middleware' => ['auth','role:admin']
 ], function () {
-  Route::get('/paneladmin', 'productsController@index');
+  Route::get('/panelAdmin', 'productsController@index');
 
 
   Route::get('/agregarCapsula', function(){
