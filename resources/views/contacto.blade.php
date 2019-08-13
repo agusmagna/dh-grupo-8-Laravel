@@ -11,12 +11,18 @@
     <section id="contacto">
       <div class="contact-container">
       <h1>Tu comentario nos interesa</h1>
-      <form class="contact-form" action="" method="post">
+
+      @if(session()->has('sent'))
+        <label>¡Muchas gracias por dejarnos tu comentario!</label> 
+      @endif
+
+      <form class="contact-form" action="/agregarComentario" method="post">
+        @csrf
         <div class="field-contact">
           <label for="nombre">
             Nombre:
           </label>
-          <input type="text" id="nombre" name="nombre" placeholder="Nombre" value="" required>
+          <input type="text" id="nombre" name="name" placeholder="Nombre" value="" required>
         </div>
           <div class="field-contact">
             <label for="email">
