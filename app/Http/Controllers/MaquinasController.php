@@ -130,4 +130,5 @@ class MaquinasController extends Controller
 
       return redirect ('panelAdmin');
     }
+
 }

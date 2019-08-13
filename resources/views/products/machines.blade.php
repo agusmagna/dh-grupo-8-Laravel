@@ -1,3 +1,4 @@
+<?php  use \App\Machines;?>
 @extends('layouts.frontend')
 
 @section('headScript')
@@ -11,7 +12,6 @@
 
 @section('content')
 <h1 class='title'>Elije tu máquina favorita</h1>
-
 <div class="productsList MachinesList">
 
   @foreach($products as $product)
@@ -26,7 +26,7 @@
             <h5 class="card-title">{{$product->name}}</h5>
             <p class="card-text">{{$product->description}}</p>
             <p class="card-text"><small class="text-muted">Precio: $ {{$product->price}}</small></p>
-            <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            <a href="{{url('/products/cart/{id}')}}" class="btn btn-primary">Agregar al carrito</a>
           </div>
         </div>
       </div>

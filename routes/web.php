@@ -34,7 +34,7 @@ Route::get('/capsulesSearch', 'CapsulasController@search');
 
 Route::get('/capsulesSearch/{id}', 'CapsulasController@show');
 
-Route::post('/cart/addcapsule', 'CartController@addCapsule');
+Route::get('/products/cart/{id}', 'CartController@addMachine');
 
 Route::get('/products/{category}', 'productsController@directory');
 

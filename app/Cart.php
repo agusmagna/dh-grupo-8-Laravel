@@ -11,11 +11,16 @@ class Cart extends Model
 
   public function machines()
   {
-      return $this->hasMany(Machines::class,'machines_id')
+    return $this->belongsToMany(Machines::class,'cart_machine','cart_id','machines_id');
   }
   public function capsules()
   {
-      return $this->hasMany(Capsules::class,'capsules_id')
+    return $this->belongsToMany(Capsules::class,'cart_capsule','cart_id','capsules_id');
+  }
+
+  public function user()
+  {
+    return $this->belongsTo(User::class,'user_id');
   }
 
 }

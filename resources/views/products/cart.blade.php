@@ -1,4 +1,4 @@
 {{cart->capsules}}
-{{cart->machines}}
+{{cart->machines()}}
 {{cart->quantity}}
 {{cart->status}}

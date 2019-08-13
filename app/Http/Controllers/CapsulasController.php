@@ -142,4 +142,5 @@ class CapsulasController extends Controller
         'products'=> $productos
       ]);
     }
+  
 }
