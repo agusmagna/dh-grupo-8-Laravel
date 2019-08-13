@@ -2,7 +2,7 @@
   height: 100vh;
 }
 body{
-  font-family: 'Reboto', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 .title{
@@ -54,9 +54,11 @@ body{
 }
 .botones{
   display: flex;
+
 }
 .botones a{
   margin: 0 auto
+
 }
 .botones a:first-child{
   margin-right: 1%;
@@ -64,6 +66,7 @@ body{
 .btn-primary{
   background-color: black;
   border-color: black;
+  font-size: 1rem;
 }
 .btn-primary:hover{
   background-color: #333;
@@ -152,4 +155,15 @@ body{
 }
 .pDboton{
   align-self:flex-end;
+}
+
+
+@media (max-device-width:425px){
+.product{
+  width: 100%;
+  }
+.btn-primary{
+  font-size: 0.8rem;
+}
+
 }

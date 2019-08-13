@@ -206,6 +206,11 @@ footer ul li {
   .login a {
     text-align: center;
   }
+
+  .navbar-toggler-icon {
+    background-color: white;
+    text-align: center;
+  }
   .footer-navegacion .footer-capsulas {
     display: none;
   }

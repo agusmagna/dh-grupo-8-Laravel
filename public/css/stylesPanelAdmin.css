@@ -15,6 +15,10 @@ margin: 30px 5%;
 
 ul {
   font-size: 20px;
+  margin-left: 5vh;
+}
+h3 {
+  text-decoration: underline;
 }
 
 .button {

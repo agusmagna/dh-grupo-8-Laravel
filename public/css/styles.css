@@ -5,7 +5,7 @@
 }
 
 body {
-	font-family: 'Roboto',sans-serif;
+	font-family: 'Nunito',sans-serif;
 	color: #000;
   font-size: 1rem;
 }
@@ -25,7 +25,7 @@ body {
 #quienes-somos .fundadores h2{
   margin-top: 3vh;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 #quienes-somos .fundador{
   display: flex;
@@ -50,7 +50,7 @@ body {
 #quienes-somos .descripcion-empresa .comienzo,
 #quienes-somos .descripcion-empresa .recetas {
   width: 50%;
-  /* padding: 0 5%; */
+  padding: 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -58,20 +58,23 @@ body {
 #quienes-somos .descripcion-empresa .comienzo h2,
 #quienes-somos .descripcion-empresa .recetas h2 {
   margin-bottom: 2vh;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 #quienes-somos .descripcion-empresa .recetas p{
   align-self: center;
+
+
 
 }
 #quienes-somos .descripcion-nombre {
   margin-top: 5vh;
 }
 #quienes-somos .descripcion-nombre h2{
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 #quienes-somos .descripcion-nombre h2,
+#quienes-somos .descripcion-nombre h4,
 #quienes-somos .descripcion-nombre p{
   text-align: center;
   margin-bottom: 2vh;
@@ -144,7 +147,7 @@ body {
 #productos .capsulas h1 {
   padding-top: 2vh;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 #productos .maquinas h2 {
   font-size: 2rem;
@@ -154,16 +157,17 @@ body {
   font-size: 2rem;
 }
 #productos .maquinas h2 a:hover{
-  text-decoration: none;
+  text-decoration: underline;
   color: rgba(255, 255, 255, 0.7);
 }
 #productos .capsulas .verTodas {
   font-size: 2rem;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   color:black;
+
 }
 #productos .capsulas .verTodas:hover{
-  text-decoration: none;
+  text-decoration: underline;
   color: rgba(0, 0, 0, 0.7);
 }
 #productos .capsulas{
@@ -253,6 +257,10 @@ body {
   #productos h1 {
     padding-left: 2.5%;
     padding-right: 2.5%;
-    font-size: 3rem;
+    font-size: 2rem;
   }
+
+  #productos .maquinas,
+  #productos .capsulas {
+    width: 100%;
 }

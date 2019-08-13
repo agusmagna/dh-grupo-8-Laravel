@@ -54,7 +54,7 @@
     </article>
     <article class="descripcion-nombre">
       <h2>¿Sabés que significa TIGOÛT?</h2>
-      <p>Es una palabra de origen francés que significa...</p>
+      <h4>Es una palabra de origen francés que significa...</h4>
       <div class="juego-nombre">
         <p class="consigna">¡Pasá el cursor por las opciones para descubrirlo!</p>
         <div class="opciones">

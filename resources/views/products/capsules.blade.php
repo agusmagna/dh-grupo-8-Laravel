@@ -67,7 +67,7 @@
   {{$products->links()}}
 @endif
   <div class="verTodos">
-    <a href="{{url('/products/capsules')}}" class="btn btn-primary">Ver todos los productos</a>
+    <a href="{{url('/products/capsules')}}" class="btn btn-primary todos">Ver todos los productos</a>
   </div>
 </div>
 @endsection
