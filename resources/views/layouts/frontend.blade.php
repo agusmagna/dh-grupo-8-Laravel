@@ -51,8 +51,11 @@
                       <li><a href="{{ url('/products/categories') }}">Productos</a></li>
                       <li><a href="{{ url('/contacto') }}">Contacto</a></li>
                       @endif
-                    </ul>
 
+                    </ul>
+                    @if(Auth::check() && Auth::user()->isAdmin())
+                      <a href="{{ url('/panelAdmin')}}" class='panelAdminLink'>Ir al panel de edición</li>
+                    @endif
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
