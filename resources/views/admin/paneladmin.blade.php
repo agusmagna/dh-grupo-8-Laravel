@@ -63,6 +63,7 @@
       @endforeach
   </tbody>
 </table>
+{{$machines->links()}}
 </section>
 
 
@@ -111,7 +112,7 @@
       @endforeach
   </tbody>
 </table>
-
+{{$capsules->links()}}
 </section>
 
 @endsection

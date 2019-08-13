@@ -18,8 +18,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $productosMaquinas = Machines::all();
-        $productosCapsulas = Capsules::all();
+        $productosMaquinas = Machines::paginate(5);
+        $productosCapsulas = Capsules::paginate(5);
 
         return view('admin.panelAdmin',[
           'machines'=> $productosMaquinas,
