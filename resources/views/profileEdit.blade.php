@@ -18,7 +18,7 @@
   <div class="info">
     <form class="" action="{{url('/profileEdit')}}" method="post">
 
-
+      @csrf
       <p>Nombre:
         <input type="text" name="name" value="{{ old('first_name', $user->first_name)}}">
       </p>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -28,7 +29,7 @@ class ProfileController extends Controller
 
 
         $user->first_name = $form['name'];
-        $user->last_name = $form['description'];
+        $user->last_name = $form['last_name'];
         $user->phone_number =  $form['phone_number'];
 
 
