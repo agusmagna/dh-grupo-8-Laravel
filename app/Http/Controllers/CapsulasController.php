@@ -60,8 +60,8 @@ class CapsulasController extends Controller
 
         $capsulaNueva->name = $form['name'];
         $capsulaNueva->description = $form['description'];
-        $capsulaNueva->imageCapsule =  $form->file('imageCapsule')->store('public/capsules');
-        $capsulaNueva->imageProduct =  $form->file('imageProduct')->store('public/capsules');
+        $capsulaNueva->imageCapsule =  $form->file('imageCapsule')->store('public/capsulas');
+        $capsulaNueva->imageProduct =  $form->file('imageProduct')->store('public/producto_final');
         $capsulaNueva->price =  $form['price'];
         $capsulaNueva->flavor = $form['flavor'];
         $capsulaNueva->stock =  $form['stock'];
@@ -142,5 +142,5 @@ class CapsulasController extends Controller
         'products'=> $productos
       ]);
     }
-  
+
 }
