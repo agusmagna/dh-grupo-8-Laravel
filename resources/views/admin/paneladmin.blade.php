@@ -9,8 +9,8 @@
 <div id="panelAdmin">
 <h2>Listado de Productos</h2>
 <ul>
-  <li><a href="#tableMachines">Máquinas</a></li>
-  <li><a href="#tableCapsules">Cápsulas</a></li>
+  <li><a href="#tableMachines" id='button-machine'>Máquinas</a></li>
+  <li><a href="#tableCapsules" id='button-capsule'>Cápsulas</a></li>
 </ul>
 </div>
 <section id="tableMachines">
@@ -114,5 +114,7 @@
 </table>
 {{$capsules->links()}}
 </section>
+
+<script src="{{asset('js/panelAdmin.js')}}"></script>
 
 @endsection
