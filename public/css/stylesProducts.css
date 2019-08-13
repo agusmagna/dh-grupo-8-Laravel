@@ -170,5 +170,8 @@ body{
   .verTodos{
     width: 50%;
   }
+  .productDetails{
+    display:block;
+  }
 
 }
