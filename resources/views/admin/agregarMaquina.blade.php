@@ -1,4 +1,4 @@
-@extends('layouts.frontend')
+@extends('layouts.backend')
 @section('headScript')
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 @endsection
@@ -28,7 +28,7 @@
                             @csrf
 
                           @include ('admin.formMaquinas')
-                          
+
                           <div class="form-group row mb-0">
                           <div class="col-md-6 offset-md-4">
                           <button type="submit" class="btn btn-primary">

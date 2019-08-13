@@ -1,5 +1,5 @@
 
-@extends('layouts.frontend')
+@extends('layouts.backend')
 @section('css')
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/stylesLoginRegister.css') }}" rel="stylesheet">

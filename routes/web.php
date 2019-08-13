@@ -23,7 +23,7 @@ Route::get('/sl', function(){
 });
 
 Route::get('/correrMigracion', function(){
-  Artisan::call('migrate');
+  Artisan::call('migrate:fresh --seed');
 });
 
 Route::get('/products/categories', function () {
