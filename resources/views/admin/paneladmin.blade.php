@@ -115,6 +115,6 @@
 {{$capsules->links()}}
 </section>
 
-<script src="{{asset('js/panelAdmin.js')}}"></script>
+<script src="{{url('js/panelAdmin.js')}}"></script>
 
 @endsection
