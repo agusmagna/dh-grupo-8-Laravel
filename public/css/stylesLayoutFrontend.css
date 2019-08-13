@@ -67,6 +67,10 @@ footer ul li a:hover{
   color:white;
   text-decoration: none;
 }
+.fas,
+.fa-bars{
+ color:white;
+}
 
 /* Navegador y Footer */
 
@@ -225,4 +229,10 @@ footer ul li {
   .footer-navegacion ul {
     width: 100%;
   }
+}
+#navbarSupportedContent{
+  margin-left:0;
+}
+.loginRegister{
+  margin-top: 5vh;
 }

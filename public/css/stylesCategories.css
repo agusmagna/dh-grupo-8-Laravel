@@ -64,3 +64,12 @@ body {
 .option .capsule{
   width: 50%;
 }
+@media (max-device-width:425px){
+  .options{
+    display: block;
+    margin: 0 auto;
+  }
+  .option{
+    width: 70%;
+  }
+}

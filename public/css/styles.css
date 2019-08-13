@@ -239,7 +239,12 @@ body {
   }
 }
 @media (max-device-width:425px){
-
+  #quienes-somos h1{
+    font-size: 2rem;
+  }
+  #quienes-somos h2{
+    font-size: 1.5rem;
+  }
   #quienes-somos .descripcion-nombre .juego-nombre .opciones{
     display: block;
     padding: 1vh 1%;
@@ -255,4 +260,11 @@ body {
     padding-right: 2.5%;
     font-size: 3rem;
   }
+}
+#productos .maquinas,
+#productos .capsulas {
+  width: 100%;
+}
+.verTodas{
+  text-align: center;
 }
