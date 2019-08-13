@@ -14,5 +14,26 @@ class ProfileController extends Controller
 
     return view('profile', ['user'=>$user]);
   }
+  public function edit()
+  {
+    $user = auth()->user();
 
+    return view('profileEdit', ['user'=>$user]);
+  }
+
+  public function update(Request $form)
+    {
+        $user = Auth::user();
+
+
+
+        $user->first_name = $form['name'];
+        $user->last_name = $form['description'];
+        $user->phone_number =  $form['phone_number'];
+
+
+        $user->update();
+
+        return redirect('profile');
+    }
 }

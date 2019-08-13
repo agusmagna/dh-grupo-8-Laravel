@@ -20,7 +20,7 @@
     <p>Apellido: {{$user->last_name}}</p>
     <p>Email: {{$user->email}}</p>
     <p>Número de teléfono: {{$user->phone_number}}</p>
-    {{Storage::url($user->avatar)}}
+    <a href="{{url('/profileEdit')}}">Editar perfil</a>
   </div>
 
 

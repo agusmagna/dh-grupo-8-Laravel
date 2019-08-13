@@ -76,7 +76,7 @@ class RegisterController extends Controller
             'username' => $data['username'],
             'country_born' => $data['country_born'],
             'phone_number' => $data['phone_number'],
-            'avatar' => 'app/' . request()->file('avatar')->store('public/avatars'),
+            'avatar' => request()->file('avatar')->store('public/avatars'),
             'source_referral' => $data['source_referral'],
             'password' => Hash::make($data['password']),
         ]);

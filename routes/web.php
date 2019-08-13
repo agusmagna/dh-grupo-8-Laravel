@@ -41,6 +41,8 @@ Route::get('/products/{category}', 'productsController@directory');
 Auth::routes();
 
 Route::get('/profile', 'profileController@index');
+Route::get('/profileEdit', 'profileController@edit');
+Route::post('/profileEdit', 'profileController@update');
 
 Route::get('/logout', 'LogoutController@logout');
 
