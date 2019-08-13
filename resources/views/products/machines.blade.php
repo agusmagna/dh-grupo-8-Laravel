@@ -19,7 +19,7 @@
     <div class="card mb-3" style="max-width: 540px;">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img src="{{Storage::url($product->image)}}" class="card-img" alt="...">
+          <img src="{{Storage::url($product->image)}}" class="card-img machine-mobile" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body">
