@@ -75,3 +75,9 @@ Route::group([
 Route::get('/notAdmin', function () {
     return view('admin/notAdmin');
 });
+
+/*Route::get('/agregarComentario', function(){
+  return view ('comentarios');
+});*/
+Route::get('/agregarComentario','CommentsController@comment');
+Route::post('/agregarComentario','CommentsController@store');

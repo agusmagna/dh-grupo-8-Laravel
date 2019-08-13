@@ -11,7 +11,8 @@
     <section id="contacto">
       <div class="contact-container">
       <h1>Tu comentario nos interesa</h1>
-      <form class="contact-form" action="" method="post">
+      <form class="contact-form" action="/agregarComentario" method="post">
+        @csrf
         <div class="field-contact">
           <label for="nombre">
             Nombre:
