@@ -156,14 +156,19 @@ body{
 .pDboton{
   align-self:flex-end;
 }
-
-
 @media (max-device-width:425px){
-.product{
-  width: 100%;
+  .buscador input{
+    border: solid 0.5px rgba(0,0,0,0.5)
   }
-.btn-primary{
-  font-size: 0.8rem;
-}
+  .capsulesList{
+    display: block;
+    margin: 0 auto;
+  }
+  .product{
+    width: 90%;
+  }
+  .verTodos{
+    width: 50%;
+  }
 
 }

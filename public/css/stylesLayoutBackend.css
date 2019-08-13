@@ -45,8 +45,11 @@ nav ul{
   color:white;
   text-decoration: none;
 }
+.menu{
+  justify-content: flex-start;
+  width: 70%;
+}
 nav  ul li a:hover,
-.panelAdminLink:hover,
 .logoutTigout:hover,
 footer ul li a:hover{
   color:rgba(255, 255, 255, 0.8);
@@ -63,14 +66,7 @@ footer ul li a:hover{
 .profileIcon:hover {
   color:rgba(255, 255, 255, 0.8);
 }
-.panelAdminLink{
-  color:white;
-  text-decoration: none;
-}
-.fas,
-.fa-bars{
- color:white;
-}
+
 
 /* Navegador y Footer */
 
@@ -214,11 +210,6 @@ footer ul li {
   .login a {
     text-align: center;
   }
-
-  .navbar-toggler-icon {
-    background-color: white;
-    text-align: center;
-  }
   .footer-navegacion .footer-capsulas {
     display: none;
   }
@@ -234,10 +225,4 @@ footer ul li {
   .footer-navegacion ul {
     width: 100%;
   }
-}
-#navbarSupportedContent{
-  margin-left:0;
-}
-.loginRegister{
-  margin-top: 5vh;
 }

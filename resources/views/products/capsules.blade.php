@@ -24,7 +24,7 @@
     @if($products->isEmpty())
     <p class='productoNoEncontrado'>Ups! No hemos encontrado ningún producto con ese nombre</p>
     @endif
-  <div class="productsList">
+  <div class="productsList capsulesList">
   @foreach($products as $product)
   <div class="product">
     <div class="image">

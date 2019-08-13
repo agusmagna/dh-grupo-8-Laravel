@@ -65,14 +65,12 @@ body {
 .option .capsule{
   width: 50%;
 }
-
 @media (max-device-width:425px){
-.option h2{
-  font-size: 1rem;
-}
-
-.option{
-  width: 100%;
-  margin: 10vh auto;
-
+  .options{
+    display: block;
+    margin: 0 auto;
+  }
+  .option{
+    width: 70%;
+  }
 }
