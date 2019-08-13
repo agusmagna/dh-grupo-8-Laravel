@@ -37,6 +37,7 @@ nav ul{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-left: 10%;
 }
 #navbarSupportedContent{
   margin-left: 7%;
@@ -44,6 +45,7 @@ nav ul{
 .logoutTigout{
   color:white;
   text-decoration: none;
+
 }
 nav  ul li a:hover,
 .panelAdminLink:hover,
@@ -59,6 +61,7 @@ footer ul li a:hover{
   font-size: 1.5em;
   text-decoration: none;
   margin: auto 15%;
+  
 }
 .profileIcon:hover {
   color:rgba(255, 255, 255, 0.8);
@@ -70,6 +73,7 @@ footer ul li a:hover{
 .fas,
 .fa-bars{
  color:white;
+
 }
 
 /* Navegador y Footer */

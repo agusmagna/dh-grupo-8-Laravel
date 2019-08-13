@@ -54,7 +54,7 @@
 
                     </ul>
                     @if(Auth::check() && Auth::user()->isAdmin())
-                      <a href="{{ url('/panelAdmin')}}" class='panelAdminLink'>Ir al panel de edición</li>
+                      <a href="{{ url('/panelAdmin')}}" class='panelAdminLink'>Panel de edición</li>
                     @endif
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto loginRegister">
