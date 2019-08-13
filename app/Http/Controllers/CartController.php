@@ -15,14 +15,15 @@ class CartController extends Controller
 {
     public function addMachine(Request $request, $id){
       $userId = Auth::user()->$id;
-      $cart = Cart::where('user_id','=',$userId)->where('status', '=', 'pending')->get();
-      if($cart == 'NULL'){
-        $cart = new Cart;
-        $cart->attach($userId);
+      $cart = Cart::where('user_id','=',$userId)->where('status', '=', 'pending')->first();
+      dd($cart);
+      if($cart === null){
+        $cart = Auth::user()->carts()->create();
       }
+
       $machine = Machines::find($id);
       $cart->machines()->attach($machine);
-      return view('cart');
+      return view('products/cart', ['cart' => $cart]);
     }
     public function addCapsule(Request $request){
       var_dump($request);

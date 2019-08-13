@@ -15,12 +15,9 @@ class CreateCartTable extends Migration
     {
         Schema::create('cart', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
             $table->integer('user_id');
-            $table->integer('capsule_id')->nullable;
-            $table->integer('machine_id')->nullable;
-            $table->integer('quantity');
-            $table->string('status');
+            $table->timestamps();
+            $table->string('status')->default('pending');
         });
     }
 
