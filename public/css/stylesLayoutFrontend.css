@@ -61,7 +61,7 @@ footer ul li a:hover{
   font-size: 1.5em;
   text-decoration: none;
   margin: auto 15%;
-  
+
 }
 .profileIcon:hover {
   color:rgba(255, 255, 255, 0.8);
@@ -238,10 +238,12 @@ footer ul li {
   .footer-navegacion ul {
     width: 100%;
   }
-}
-#navbarSupportedContent{
+
+#navbarSupportedContent,
+.navbar-nav{
   margin-left:0;
 }
 .loginRegister{
   margin-top: 5vh;
+}
 }
