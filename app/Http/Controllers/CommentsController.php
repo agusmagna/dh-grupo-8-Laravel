@@ -44,7 +44,7 @@ class CommentsController extends Controller
         $reglas= [
           'name' => 'required|string|max:255',
           'email' => 'required|email|max:255',
-          'comentarios' => 'required|string|max:500'
+          'comments' => 'required|string|max:500'
         ];
         $mensajes = [
           'string'=> "El campo :attribute debe ser un texto",
@@ -56,10 +56,10 @@ class CommentsController extends Controller
         $ComentarioNuevo = new Comment();
         $ComentarioNuevo->name = $form['name'];
         $ComentarioNuevo->email = $form['email'];
-        $ComentarioNuevo->comentarios =  $form['comentarios'];
+        $ComentarioNuevo->comentarios =  $form['comments'];
 
         $ComentarioNuevo->save();
-        return redirect ('Contacto');
+        return redirect('/contacto')->with('sent', true);
     }
     /**
      * Display the specified resource.
